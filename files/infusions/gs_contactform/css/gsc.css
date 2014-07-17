@@ -1,0 +1,83 @@
+/* 
+    Created on : 27.06.2014, 13:14:39
+    Author     : GUL-Sonic
+*/
+.gsc_plus, .gsc_positive {
+    color: green;
+    font-weight: bold;
+}
+.gsc_plus_bgr {
+    background: green;    
+}
+.gsc_minus, .gsc_negative {
+    color: red;
+    font-weight: bold;
+}
+.gsc_minus_bgr {
+    background: red;    
+}
+.gsc_require {
+    color: red;
+}
+.gsc_copyright {
+    color:black;
+    font-size:12px
+}
+.gsc_paypal {    
+    margin: 0px 10px 0px 0px;
+}
+.gsc_update {
+    font-weight: bold; 
+    color: #1bdc16;
+}
+.navi{
+    position: relative;
+    top: -12px;
+    margin: 5px 10px 5px 2px;
+}
+.gsc_navi {
+    text-align: center;
+}
+.gsc_navi span {
+    white-space:nowrap;
+    margin: 5px;    
+}
+.tbl_gsc{
+    width: 100%;    
+}
+.tbl_gsc_del {
+    background: rgb(255, 135, 135);
+    background: rgba(255, 135, 135, 0.8);
+}
+.tbl_gsc td {
+    text-align: center;    
+}
+.gsc_left {
+    text-align: left !important;
+}
+.gsc_right {
+    text-align: right !important;
+}
+ul.gsc_tabs {
+    margin:0px; padding:0px;
+    margin-top:5px;
+    margin-bottom:6px;
+}
+ul.gsc_tabs li {
+    list-style:none;
+    white-space:nowrap;
+    display:inline;
+}
+ul.gsc_tabs li a {		
+    padding:8px 14px 8px 14px;
+    text-decoration:none;
+    font-size:9px;	
+    font-weight:bold;
+    text-transform:uppercase;	
+}
+ul.gsc_tabs li a:hover {
+    background: rgba(0, 0, 0, 0.2);
+}
+ul.gsc_tabs li a.active {}
+.tab_content {}
+#content_2, #content_3 { display:none; }
