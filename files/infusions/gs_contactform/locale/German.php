@@ -45,7 +45,7 @@ $locale['gsc084']  = "Mit <font color='red'>*</font> gekennzeichnete Felder sind
 
 // PN
 $locale['gsc100']  = "Kontaktanfrage von:";
-$locale['gsc101']  = "Sie haben eine Anfrage &uuml;ber das Kontaktformular erhalten, um sich diese anzeigen zu lassen klicken Sie [url=".$settings['siteurl']."infusions/contact_panel/gsc_messages.php]hier[/url]";
+$locale['gsc101']  = "Sie haben eine Anfrage &uuml;ber das Kontaktformular erhalten, um sich diese anzeigen zu lassen klicken Sie [url=".$settings['siteurl']."infusions/gs_contactform/gsc_messages.php]hier[/url]";
 
 // Kontakt Fehler
 $locale['gsc120'] = "IP-Adresse ist nicht ermittelbar.";

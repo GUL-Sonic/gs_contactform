@@ -21,5 +21,5 @@
  echo "<br><center>
     <span class='gsc_copyright'>&copy; 2014 by
     <a href='mailto:gul-sonic@online.de'>Ingo Wehrstedt</a> <br>
-    GUL-Sonic's Erweitertes Kontaktformular Version " . $locale['gsc000'] . "</span></center>";
+    GUL-Sonic's Erweitertes Kontaktformular Version " . $locale['gsc001'] . "</span></center>";
 ?> 
