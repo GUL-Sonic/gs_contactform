@@ -61,7 +61,7 @@ if ((isset($_GET['edit'])) != '') {
 	$gsc_firma = $update['gsc_firma'];
 	$gsc_position = $update['gsc_position'];
 	$gsc_adress = $update['gsc_adress'];
-	$gsc_plzort = $update['gsc_plz_ort'];
+	$gsc_plzort = $update['gsc_plzort'];
 	$gsc_tel = $update['gsc_tel'];
 	$gsc_mobil = $update['gsc_mobil'];
 	$gsc_fax = $update['gsc_fax'];
@@ -88,7 +88,7 @@ if ((isset($_GET['edit'])) != '') {
 	<td style='background-color:#FFFFFF;'><font color='black'>" . $gsc_name . "</font></td>
 	</tr>";
 	
-	if(!empty($gsc_geb)) { echo "
+	if($gsc_geb !="..") { echo "
 	<tr>
 	<td width='200px'>" . $locale['gsc062'] . "</td>
 	<td style='background-color:#FFFFFF;'><font color='black'>" . $gsc_geb. "</font></td>
@@ -123,21 +123,21 @@ if ((isset($_GET['edit'])) != '') {
 	</tr>";
 	}
 	
-	if(!empty($gsc_tel)) { echo "
+	if($gsc_tel !="-") { echo "
 	<tr>
 	<td width='200px'>" . $locale['gsc067'] . "</td>
 	<td style='background-color:#FFFFFF;'><font color='black'>" . $gsc_tel. "</font></td>
 	</tr>";
 	}
 	
-	if(!empty($gsc_mobil)) { echo "
+	if($gsc_mobil !="-") { echo "
 	<tr>
 	<td width='200px'>" . $locale['gsc068'] . "</td>
 	<td style='background-color:#FFFFFF;'><font color='black'>" . $gsc_mobil. "</font></td>
 	</tr>";
 	}
 	
-	if(!empty($gsc_fax)) { echo "
+	if($gsc_fax !="-") { echo "
 	<tr>
 	<td width='200px'>" . $locale['gsc069'] . "</td>
 	<td style='background-color:#FFFFFF;'><font color='black'>" . $gsc_fax. "</font></td>
@@ -238,6 +238,8 @@ if (dbrows($result) > 0) {
 }
 		
 closetable();
+
+include_once INFUSIONS . "gs_contactform/gsc_versionschecker.php";
 
 include "gsc_copyright.php";
 

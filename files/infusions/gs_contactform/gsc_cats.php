@@ -112,6 +112,8 @@ $result = dbquery("SELECT * FROM " . DB_GSC_SUBJECT . " ORDER BY sub_name");
 }	
 closetable();
 
+include_once INFUSIONS . "gs_contactform/gsc_versionschecker.php";
+
 include "gsc_copyright.php";
 
 require_once THEMES . "templates/footer.php";

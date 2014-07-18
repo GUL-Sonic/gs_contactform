@@ -228,8 +228,10 @@ echo"	<tr>
 		</tr>
 			<td align='center' class='tbl2' colspan='0'><input type='submit' name='update' class='button' value='" . $locale['gsc141'] . "'></td>
 		</table></form>";
-		
+
 closetable();
+		
+include_once INFUSIONS . "gs_contactform/gsc_versionschecker.php";
 
 include "gsc_copyright.php";
 

@@ -110,6 +110,15 @@ $locale['gsc224'] = "Bitte geben Sie eine Fehlermeldung ein";
 // cats.php
 $locale['gsc240'] = "Betreff";
 
-//admin.php
+// admin.php
 $locale['gsc260'] = "&Uuml;berschrift f&uuml;r das Kontaktformular";
+
+// Verionsprüfung
+$locale['gsc300'] = "Versionspr&uuml;fung";
+$locale['gsc301'] = "Aktuellste Version";
+$locale['gsc302'] = "Installierte Version";
+$locale['gsc303'] = "Ihre Version ist auf dem neuesten Stand ";
+$locale['gsc304'] = "Downloadlink: ";
+$locale['gsc305'] = "Die automatische Versionspr&uuml;fung ist zur Zeit nicht m&ouml;glich!<br>Bitte klicken Sie auf den nachfolgenden Link um eine manuelle Versionspr&uuml;fung durchzuf&uuml;hren";
+$locale['gsc306'] = "Neueste Version von github.com downloaden";
 ?>
