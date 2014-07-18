@@ -207,7 +207,7 @@ $userdef4
 
 require_once INCLUDES."sendmail_include.php";
 
-		if (sendemail($settings['siteusername'],$settings['siteemail'],$gsc_name,$gsc_email,$locale['gsc40'] . $gsc_betreff,$nachricht,'html')) { 
+		if (sendemail($settings['siteusername'],$settings['siteemail'],$gsc_name,$gsc_email,$locale['gsc040'] . $gsc_betreff,$nachricht,'html')) { 
 		$msg_mail = $locale['gsc043'];
 	}	else {
 		$msg_mail = $locale['gsc044'];
@@ -219,8 +219,8 @@ dbquery("INSERT " . DB_GSC_CONTACT . " SET
 	gsc_geb = '" . stripinput($gsc_geb_tag.".".$gsc_geb_mon.".".$gsc_geb_jahr) . "',
 	gsc_firma = '" . stripinput($gsc_firma) . "',
 	gsc_position = '" . stripinput($gsc_position) . "',
-	gsc_adress = '" . stripinput($gsc_str." ".$gsc_plz_hnr) . "',
-	gsc_plzort = '" . stripinput($gsc_plz." ".$gsc_plz_ort) . "',
+	gsc_adress = '" . stripinput($gsc_str." ".$gsc_hnr) . "',
+	gsc_plzort = '" . stripinput($gsc_plz." ".$gsc_ort) . "',
 	gsc_tel = '" . stripinput($gsc_tel_vor."-".$gsc_tel_nr) . "',
 	gsc_mobil = '" . stripinput($gsc_mobil_vor."-".$gsc_mobil_nr) . "',
 	gsc_fax = '" . stripinput($gsc_fax_vor."-".$gsc_fax_nr) . "',
