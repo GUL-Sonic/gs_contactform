@@ -74,7 +74,11 @@ if (version_compare($new_version, $gsc_version, '<=') AND $new_version > 0) {
 	  <td><img src='" . INFUSIONS . "gs_contactform/images/version.gif' alt='up to date' title='" . $locale['gsc303'] . "(V." . $new_version . ")'/></td>
 	  </tr>
 	  </table>";
-} else {
+} elseif ($gsc_version < $locale['gsc001']) {
+	require_once INFUSIONS . "gs_contactform/update/gsc_update.php";
+}
+
+else {
     if (!empty($new_version)) {
         $ausgabe = "
 	<table cellpadding='0' cellspacing='1'>

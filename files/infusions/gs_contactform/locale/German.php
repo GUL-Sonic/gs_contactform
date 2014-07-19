@@ -120,5 +120,12 @@ $locale['gsc302'] = "Installierte Version";
 $locale['gsc303'] = "Ihre Version ist auf dem neuesten Stand ";
 $locale['gsc304'] = "Downloadlink: ";
 $locale['gsc305'] = "Die automatische Versionspr&uuml;fung ist zur Zeit nicht m&ouml;glich!<br>Bitte klicken Sie auf den nachfolgenden Link um eine manuelle Versionspr&uuml;fung durchzuf&uuml;hren";
-$locale['gsc306'] = "Neueste Version von github.com downloaden";
+
+$locale['gsc306'] = "Datenbank-Update verf&uuml;gbar";
+$locale['gsc307'] = "OK";
+$locale['gsc308'] = "Fehler";
+$locale['gsc309'] = "Es sind Fehler w&auml;hrend des Update-Vorgangs aufgetreten";
+$locale['gsc310'] = "Update erfolgreich";
+$locale['gsc311'] = "zur&uuml;ck";
+$locale['gsc312'] = "Neueste Version von github.com downloaden";
 ?>
