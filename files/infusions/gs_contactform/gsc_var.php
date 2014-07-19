@@ -19,6 +19,15 @@
  | written permission from the original author(s).				|
  +--------------------------------------------------------------*/
 
+if (!defined("IN_FUSION") || !IN_FUSION)
+   die("Access denied!");
+   
+ if (file_exists(INFUSIONS . "gs_contactform/locale/" . $settings['locale'] . ".php")) {
+    include INFUSIONS . "gs_contactform/locale/" . $settings['locale'] . ".php";
+} else {
+    include INFUSIONS . "gs_contactform/locale/German.php";
+}
+ 
 // Variablendefinition contactform.php//
 $gsc_ip = getenv("REMOTE_ADDR");
 $gsc_name = (isset($_POST['gsc_name'])) ? $_POST['gsc_name'] : "";

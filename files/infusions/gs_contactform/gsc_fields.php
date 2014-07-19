@@ -21,9 +21,9 @@
 require_once "../../maincore.php";
 require_once THEMES . "templates/admin_header.php";
 
-include INFUSIONS . "gs_contactform/infusion_db.php";
-include_once INFUSIONS . "gs_contactform/gsc_functions.php";
-include INFUSIONS . "gs_contactform/gsc_var.php";
+if (!iADMIN){
+    redirect("../../index.php");
+}
 
 if (file_exists(INFUSIONS . "gs_contactform/locale/" . $settings['locale'] . ".php")) {
     include INFUSIONS . "gs_contactform/locale/" . $settings['locale'] . ".php";
@@ -31,9 +31,9 @@ if (file_exists(INFUSIONS . "gs_contactform/locale/" . $settings['locale'] . ".p
     include INFUSIONS . "gs_contactform/locale/German.php";
 }
 
-if (!iADMIN){
-    redirect("../../login.php");
-}
+include INFUSIONS . "gs_contactform/infusion_db.php";
+include_once INFUSIONS . "gs_contactform/gsc_functions.php";
+include INFUSIONS . "gs_contactform/gsc_var.php";
 
 opentable($locale['gsc160']);
 
@@ -121,8 +121,9 @@ $result = dbquery("SELECT * FROM " . DB_GSC_FIELDS . " ORDER BY id");
 		if (empty($data12['field_name'])) { echo "
 		<td class='$cell_color' align='center'width='120px'><a href='" . FUSION_SELF . "?edit=" . $data12['id'] . "'>" . $locale['gsc151'] . "</a></td>";}
 		else { echo "
-        <td class='$cell_color' align='center'width='120px'><a href='" . FUSION_SELF . "?edit=" . $data12['id'] . "'>" . $locale['gsc140'] . "</a>";
-        echo " -- <a href='" . FUSION_SELF . "?del=" . $data12['id'] . "' onclick='return gsc_ask_first(this)'>" . $locale['gsc143'] . "</a></td>";}
+        <td class='$cell_color' align='center'width='120px'><a href='" . FUSION_SELF . "?edit=" . $data12['id'] . "'><img src='".INFUSIONS."gs_contactform/images/edit.png' alt='" . $locale['gsc140'] . "' title='" . $locale['gsc140'] . "'></img></a>";
+        echo "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
+		echo "<a href='" . FUSION_SELF . "?del=" . $data12['id'] . "' onclick='return gsc_ask_first(this)'><img src='".INFUSIONS."gs_contactform/images/delete.png' alt='" . $locale['gsc143'] . "' title='" . $locale['gsc143'] . "'></img></a></td>";}
         echo"</tr>";
     }
 	echo"</table>";

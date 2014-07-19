@@ -5,7 +5,7 @@
  | Copyright © 2002 - 2014 Nick Jones                 			|
  | http://www.php-fusion.co.uk/                       			|
  +--------------------------------------------------------------+
- | Infusion: gs_contactform                                			|
+ | Infusion: gs_contactform                            			|
  | Author:   GUL-Sonic											|
  | web		 http://www.germanys-united-legends.de 				|
  | Email	 gul-sonic@online.de 								|
@@ -32,7 +32,7 @@ if (file_exists(INFUSIONS . "gs_contactform/locale/" . $settings['locale'] . ".p
 }
 
 if (!iADMIN){
-    redirect("../../login.php");
+    redirect("../../index.php");
 }
 
 opentable($locale['gsc160']);
@@ -41,7 +41,7 @@ require_once "gsc_navigation.php";
 
 closetable();
 
-opentable($locale['gsc162']);
+opentable($locale['gsc163']);
 
 if (isset($_POST['save'])) {
     if ($_POST['sub_name'] == '') {
@@ -102,8 +102,9 @@ $result = dbquery("SELECT * FROM " . DB_GSC_SUBJECT . " ORDER BY sub_name");
         $i++;
         echo"<tr>
         <td class='$cell_color' align='center' width='150px'>" . $data13['sub_name'] . "</td>
-        <td class='$cell_color' align='center'width='120px'><a href='" . FUSION_SELF . "?edit=" . $data13['id'] . "'>" . $locale['gsc140'] . "</a>";
-        echo " -- <a href='" . FUSION_SELF . "?del=" . $data13['id'] . "' onclick='return gsc_ask_first(this)'>" . $locale['gsc143'] . "</a>";
+        <td class='$cell_color' align='center'width='120px'><a href='" . FUSION_SELF . "?edit=" . $data13['id'] . "'><img src='".INFUSIONS."gs_contactform/images/edit.png' alt='" . $locale['gsc140'] . "' title='" . $locale['gsc140'] . "'></img></a>";
+		echo "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
+        echo "<a href='" . FUSION_SELF . "?del=" . $data13['id'] . "' onclick='return gsc_ask_first(this)'><img src='".INFUSIONS."gs_contactform/images/delete.png' alt='" . $locale['gsc143'] . "' title='" . $locale['gsc143'] . "'></img></a>";
         echo"</td></tr>";
     }
 	echo"</table>";

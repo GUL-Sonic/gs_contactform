@@ -18,7 +18,11 @@
  | copyright header is strictly prohibited without				|
  | written permission from the original author(s).				|
  +--------------------------------------------------------------*/
-function cURLcheck() {
+
+ if (!defined("IN_FUSION") || !IN_FUSION)
+   die("Access denied!");
+ 
+ function cURLcheck() {
     if (function_exists("curl_exec"))
         return "curl";
     elseif (file_get_contents(__FILE__))

@@ -32,7 +32,7 @@ if (file_exists(INFUSIONS . "gs_contactform/locale/" . $settings['locale'] . ".p
 }
 
 if (!iADMIN){
-    redirect("../../login.php");
+    redirect("../../index.php");
 }
 	
 opentable($locale['gsc160']);
@@ -228,8 +228,9 @@ if (dbrows($result) > 0) {
 		<td class='$cell_color' align='center'> <a href='mailto:" . $data11['gsc_email'] . "'>" . $data11['gsc_email'] . "</a></td>
 		<td class='$cell_color' align='center'>" . $data11['gsc_betreff'] . "</td>
 		<td class='$cell_color' align='center'> " . date('d.n.Y', $data11['gsc_timestamp'])."<br>um ". date('H:i', $data11['gsc_timestamp']) . "</td>
-        <td class='$cell_color' align='center'><a href='" . FUSION_SELF . "?edit=" . $data11['id'] . "'>" . $locale['gsc148'] . "</a>";
-        echo " -- <a href='" . FUSION_SELF . "?del=" . $data11['id'] . "' onclick='return gsc_ask_first(this)'>" . $locale['gsc143'] . "</a>";
+        <td class='$cell_color' align='center'><a href='" . FUSION_SELF . "?edit=" . $data11['id'] . "'><img src='".INFUSIONS."gs_contactform/images/read.png' alt='" . $locale['gsc148'] . "' title='" . $locale['gsc148'] . "'></img></a>";
+        echo "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
+		echo "<a href='" . FUSION_SELF . "?del=" . $data11['id'] . "' onclick='return gsc_ask_first(this)'><img src='".INFUSIONS."gs_contactform/images/delete.png' alt='" . $locale['gsc143'] . "' title='" . $locale['gsc143'] . "'></img></a>";
         echo"</td></tr>";
     }
     echo"</table>";

@@ -18,6 +18,9 @@
  | copyright header is strictly prohibited without				|
  | written permission from the original author(s).				|
  +--------------------------------------------------------------*/
+if (!defined("IN_FUSION") || !IN_FUSION)
+   die("Access denied!");
+ 
  echo "<br><center>
     <span class='gsc_copyright'>&copy; 2014 by
     <a href='mailto:gul-sonic@online.de'>Ingo Wehrstedt</a> <br>

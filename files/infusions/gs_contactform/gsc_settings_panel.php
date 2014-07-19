@@ -20,17 +20,17 @@
  +--------------------------------------------------------------*/
 require_once "../../maincore.php";
 require_once THEMES . "templates/admin_header.php";
-include INFUSIONS . "gs_contactform/infusion_db.php";
 
+if (!checkrights("GSC") || !defined("iAUTH") || !isset($_GET['aid']) || $_GET['aid'] != iAUTH)
+    redirect("../../index.php");
+	
 if (file_exists(INFUSIONS . "gs_contactform/locale/" . $settings['locale'] . ".php")) {
     include INFUSIONS . "gs_contactform/locale/" . $settings['locale'] . ".php";
 } else {
     include INFUSIONS . "gs_contactform/locale/German.php";
 }
 
-if (!checkrights("GSC") || !defined("iAUTH") || !isset($_GET['aid']) || $_GET['aid'] != iAUTH)
-    redirect("../../login.php");
-	
+include INFUSIONS . "gs_contactform/infusion_db.php";	
 include_once INFUSIONS . "gs_contactform/gsc_functions.php";
 include_once INFUSIONS . "gs_contactform/gsc_var.php";
 
@@ -84,7 +84,7 @@ echo"<table border='1' style='vertical-align: top; margin: 0px auto;' width='350
 	</tr>
 	
 	<tr>
-	<td><textarea name='admin_text' cols='44' rows='5' maxlength='250' onkeyup='count1(event)' class='textbox'>".$data6['form_header']."</textarea></td>
+	<td><textarea name='admin_text' style='width:98%' rows='5' maxlength='250' onkeyup='count1(event)' class='textbox'>".$data6['form_header']."</textarea></td>
 	</tr>
 	
 	<tr>

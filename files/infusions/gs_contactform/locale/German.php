@@ -2,7 +2,7 @@
 
 // Infusionsbeschreibung
 $locale['gsc000']  = "Kontaktformular";
-$locale['gsc001']  = "1.0";
+$locale['gsc001']  = "1.0.1";
 $locale['gsc002']  = "Überarbeitetes Kontaktformular mit Speicherung der eingegangenen Anfragen";
 
 //Kontaktformularüberschrift

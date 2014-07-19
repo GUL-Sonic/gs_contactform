@@ -18,8 +18,11 @@
  | copyright header is strictly prohibited without				|
  | written permission from the original author(s).				|
  +--------------------------------------------------------------*/
-if (!defined("IN_FUSION") || !IN_FUSION) die("Access denied!");
+ if (!defined("IN_FUSION") || !IN_FUSION) 
+	die("Access denied!");
+
 require_once "../../maincore.php";
+
 echo"
 <table border='0' style='vertical-align: top; margin: 0px auto;' width='500px'>
 <tr>
