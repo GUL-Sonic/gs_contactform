@@ -391,8 +391,8 @@ else {
 	if ($data['adress_requ'] == 1){ echo "
 	<td>" . $locale['gsc065'] ."<font color='red'>*</font></td>";}
 	else { echo "
-	<td>" . $locale['gsc066'] ."</td>";}
-	if($err_plzort==1) {echo "
+	<td>" . $locale['gsc065'] ."</td>";}
+	if($err_adress==1) {echo "
 	<td> <input type='text' name='gsc_str' style='width:150px; background-color:#FFDDDD;' maxlength='40' class='textbox' value='".$gsc_str."' placeholder='" . $locale['gsc074'] ."' />
 	<input type='text' name='gsc_hnr' style='width:40px; background-color:#FFDDDD;' maxlength='10' class='textbox' value='".$gsc_hnr."' placeholder='" . $locale['gsc075'] ."' /></td>";}
 	else {echo "

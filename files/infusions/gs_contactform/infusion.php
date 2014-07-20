@@ -125,7 +125,7 @@ $inf_insertdbrow[5] = DB_GSC_SETTINGS . " SET form_header='".$locale['gsc020']."
 
 $inf_adminpanel[1] = array(
     "title" => $locale['gsc000'],
-    "image" => "../infusions/gs_contactform/images/contact.png",
+    "image" => INFUSIONS."gs_contactform/images/contact.png",
     "panel" => "gsc_settings_panel.php",
     "rights" => "GSC"
 );
