@@ -3,9 +3,9 @@
 // Infusionsbeschreibung
 $locale['gsc000']  = "Kontaktformular";
 $locale['gsc001']  = "1.1";
-$locale['gsc002']  = "Überarbeitetes Kontaktformular mit Speicherung der eingegangenen Anfragen";
+$locale['gsc002']  = "&Uuml;erarbeitetes Kontaktformular mit Speicherung der eingegangenen Anfragen";
 
-//Kontaktformularüberschrift
+//Kontaktformularï¿½berschrift
 $locale['gsc020']  = "Sie haben Fragen, W&uuml;nsche oder Anregungen?\nSchreiben Sie uns, wir freuen uns auf Ihre Nachricht.";
 $locale['gsc021']  = "Als registriertes Mitglied dieser Seite k&ouml;nnen Sie mir auch <br>eine ";
 $locale['gsc022']  = "Private Nachricht (PN) ";
@@ -40,7 +40,7 @@ $locale['gsc075']  = "100b";
 $locale['gsc076']  = "12345";
 $locale['gsc077']  = "Ortsname";
 
-// Kontaktformular-Fuß
+// Kontaktformular-Fuï¿½
 $locale['gsc080']  = "Zeichen verbleibend";
 $locale['gsc081']  = "Sicherheitscode:";
 $locale['gsc082']  = "Sicherheitscode eingeben:";
@@ -85,7 +85,7 @@ $locale['gsc150'] = "Der Eintrag ist bereits vorhanden";
 $locale['gsc151'] = "hinzuf&uuml;gen";
 $locale['gsc152'] = "schlie&szlig;en";
 
-// Überschriften
+// ï¿½berschriften
 $locale['gsc160'] = "Einstellungen";
 $locale['gsc161'] = "Kontaktfelder - Verwaltung";
 $locale['gsc162'] = "Eigene Kontaktfelder";
@@ -121,7 +121,7 @@ $locale['gsc262'] = "Absenderadresse die bei <br><font color='blue'>\"Kopie an V
 $locale['gsc263'] = "PM bei Eingang einer Kontaktanfrage senden an: ";
 $locale['gsc264'] = "Keine PM bei Eingang einer Kontaktanfrage senden";
 
-// Verionsprüfung
+// Verionsprï¿½fung
 $locale['gsc300'] = "Versionspr&uuml;fung";
 $locale['gsc301'] = "Aktuellste Version";
 $locale['gsc302'] = "Installierte Version";
