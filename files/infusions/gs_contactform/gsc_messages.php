@@ -193,7 +193,7 @@ if ((isset($_GET['edit'])) != '') {
 
 	<tr>
 	<td width='200px'>" . $locale['gsc073'] . "</td>
-	<td><textarea name='gs_text' cols='38' rows='10' maxlength='1000' readonly class='textbox'>" . $gsc_text . "</textarea></td>
+	<td style='background-color:#FFFFFF;'><font color='black'>" . nl2br($gsc_text) . "</font></td>
 	</tr>
 	
 	<tr>

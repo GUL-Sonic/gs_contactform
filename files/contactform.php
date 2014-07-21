@@ -126,7 +126,7 @@ if ($gsc_web) {
 $web= "
 <tr>
 <td width='20px' valign='top'>&nbsp;</td>
-<td><b>$locale[gsc071]</b></td><td>$gsc_web</td>
+<td><b>$locale[gsc071]</b></td><td><a href='$gsc_web'>$gsc_web</a></td>
 </tr>";
 }
 if ($gsc_userdef1) { 
@@ -176,7 +176,7 @@ $mobil
 $fax
 <tr>
 <td width='20px' valign='top'>&nbsp;</td>
-<td><b>$locale[gsc070]</b></td><td>$gsc_email</td>
+<td><b>$locale[gsc070]</b></td><td><a href='mailto:$gsc_email'>$gsc_email</a></td>
 </tr>
 $web
 $userdef1
@@ -209,12 +209,20 @@ $userdef4
 
 require_once INCLUDES."sendmail_include.php";
 
-		if (sendemail($settings['siteusername'],$settings['siteemail'],$gsc_name,$gsc_email,$locale['gsc040'] . $gsc_betreff,$nachricht,'html')) { 
+		if (sendemail($settings['siteusername'],$data['email_to'],$gsc_name,$gsc_email,$locale['gsc040'] . $gsc_betreff,$nachricht,'html')) { 
 		$msg_mail = $locale['gsc043'];
 	}	else {
 		$msg_mail = $locale['gsc044'];
 	}
-	
+
+if($email_kopie ==1) {	
+	if (sendemail($gsc_name,$gsc_email,$settings['sitename'],$data['email_answer'],$locale['gsc046'] . $settings['sitename'] . $locale['gsc072'] . " " . $gsc_betreff,$nachricht,'html')) { 
+		$msg_mail = $locale['gsc043'];
+	}	else {
+		$msg_mail = $locale['gsc044'];
+	}
+}	
+
 dbquery("INSERT " . DB_GSC_CONTACT . " SET
 	gsc_ip = '" . stripinput($gsc_ip) . "',
 	gsc_name = '" . stripinput($gsc_name) . "',
@@ -240,7 +248,7 @@ $pm_subject = $locale['gsc100'] . " " . $gsc_name;
 $pm_message = $locale['gsc101'];
 
 dbquery("INSERT INTO ".$db_prefix."messages (message_to, message_from, message_subject, message_message, message_smileys, message_read, message_datestamp, message_folder) 
-				  VALUES( '1', '1', '".$pm_subject."', '<br>".$pm_message."', 'n', '0', '".time()."', '0')");
+				  VALUES( '".$data['pm_to']."', '1', '".$pm_subject."', '<br>".$pm_message."', 'n', '0', '".time()."', '0')");
 }
 
 // Anfrage als Email senden //
@@ -315,10 +323,12 @@ else {
 	echo"
 	<center><strong>" . nl2br($data['form_header']) ;
 	if(iMEMBER) {
-	echo" <br><br>" . $locale['gsc021'] ;
-	} 	
+		if($data['pm_to'] !=0) {
+			echo" <br><br>" . $locale['gsc021'] . "<a href='messages.php?msg_send=".$data['pm_to']."' title='" . $locale['gsc022'] . "'>" . $locale['gsc022'] . "</a>" . $locale['gsc023'];
+		} 
+			}
+	
 	echo"</strong></center>
-	<br>
 	<br>";
 
 	echo "
@@ -606,8 +616,12 @@ else {
 		echo "<input type='text' id='captcha_code' name='captcha_code' class='textbox' autocomplete='off' style='width:100px' />";
 	}
 	echo "</td>\n</tr>\n
-	</table>
-	<br>
+	<br></table>
+	<table border='0' style='vertical-align: top; margin: 0px auto;'>
+	<tr>
+	<td class='tbl1'><center><input type='checkbox' " . (($email_kopie == 1) ? "checked='checked'" : "") . " name='email_kopie' value='1' style='width:10px; text-align:center'></center></td><td>".$locale['gsc045']."</td>
+	<tr>
+	<br></table>
 	<center><input type='submit' name='gsc_senden' value='" . $locale['gsc083'] . "' class='button' /></center>
 	</form><br><br>
 	<center>" . $locale['gsc084'] . "</center>";

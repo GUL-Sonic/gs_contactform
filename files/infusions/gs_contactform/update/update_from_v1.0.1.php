@@ -51,11 +51,19 @@ function dbquery_gsc_update($query) {
 	}
 }
 
-opentable($locale['gsc306'].": v1.0 => v1.0.1");
+opentable($locale['gsc306'].": v1.0.1 => v1.1");
 
-$mysql[] = "UPDATE ".DB_GSC_SETTINGS." SET version='1.0.1'";
 
-$mysql[] = "UPDATE ".DB_INFUSIONS." SET inf_version='1.0.1' WHERE inf_folder='gs_contactform'";
+$mysql[] = "ALTER TABLE ".DB_GSC_SETTINGS." ADD email_to varchar (250) NOT NULL";
+$mysql[] = "ALTER TABLE ".DB_GSC_SETTINGS." ADD email_answer varchar (250) NOT NULL";
+$mysql[] = "ALTER TABLE ".DB_GSC_SETTINGS." ADD pm_to varchar (10) NOT NULL";
+
+$mysql[] = "UPDATE ".DB_GSC_SETTINGS." SET email_to='".$settings['siteemail']."'";
+$mysql[] = "UPDATE ".DB_GSC_SETTINGS." SET email_answer='".$settings['siteemail']."'";
+$mysql[] = "UPDATE ".DB_GSC_SETTINGS." SET pm_to='1'";
+$mysql[] = "UPDATE ".DB_GSC_SETTINGS." SET version='1.1'";
+
+$mysql[] = "UPDATE ".DB_INFUSIONS." SET inf_version='1.1' WHERE inf_folder='gs_contactform'";
 
 $errors = 0;
 foreach($mysql as $query) {

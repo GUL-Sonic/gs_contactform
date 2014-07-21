@@ -45,6 +45,9 @@ opentable($locale['gsc161']);
 if (isset($_POST['update'])) {
     dbquery("UPDATE " . DB_GSC_SETTINGS . " SET
 	form_header = '" . stripinput((isset($_POST['admin_text']) ? $_POST['admin_text'] : "")) . "',
+	email_to = '" . stripinput((isset($_POST['email_to']) ? $_POST['email_to'] : "")) . "',
+	email_answer = '" . stripinput((isset($_POST['email_answer']) ? $_POST['email_answer'] : "")) . "',
+	pm_to = '" . stripinput((isset($_POST['pm_to']) ? $_POST['pm_to'] : "")) . "',
 	geb_show = '" . stripinput((isset($_POST['geb_show']) ? 1 : 0)) . "',
 	geb_requ = '" . stripinput((isset($_POST['geb_requ']) ? 1 : 0)) . "',
 	firma_show = '" . stripinput((isset($_POST['firma_show']) ? 1 : 0)) . "',
@@ -77,6 +80,7 @@ if (isset($_POST['update'])) {
 echo"<form name='gsc_settings' method='post' enctype='multipart/form-data' action='" . FUSION_SELF . $aidlink . "'>";
 
 $data6 = dbarray(dbquery("SELECT *  FROM " . DB_GSC_SETTINGS . ""));
+$result = dbquery("SELECT * FROM " . DB_USERS . " ORDER BY user_level DESC, user_name ASC");
 
 echo"<table border='1' style='vertical-align: top; margin: 0px auto;' width='350px'>
 	<tr>
@@ -114,6 +118,27 @@ echo"<table border='1' style='vertical-align: top; margin: 0px auto;' width='350
 	</div>
 	</td>
 	</tr>
+	<tr>
+	<td class='tbl1'><center><strong>" . $locale['gsc261'] ."</strong></center></td>
+	</tr>
+	<tr>
+	<td><input type='text' name='email_to' style='width:98%;' maxlength='40' class='textbox' value='".$data6['email_to']."' placeholder='" . $settings['siteemail'] ."' /></td>
+	</tr>
+	<tr>
+	<td class='tbl1'><center><strong>" . $locale['gsc262'] ."</strong></center></td>
+	</tr>
+	<tr>
+	<td><input type='text' name='email_answer' style='width:98%;' maxlength='40' class='textbox' value='".$data6['email_to']."' placeholder='" . $settings['siteemail'] ."' /></td>
+	</tr>
+	<tr>
+	<td class='tbl1'><center><strong>" . $locale['gsc263'] ."</strong></center></td>
+	</tr>
+	<tr>
+	<td><select name='pm_to' class='textbox' style='width:100%;'>\n
+	<option " . ($data6['pm_to'] == '0' ? " selected" : "")." value='0'>".$locale['gsc264']."</option>\n";
+	while ($data19 = dbarray($result)) { echo"
+	<option " . ($data6['pm_to'] == $data19['user_id'] ? " selected" : "")." value='" . $data19['user_id'] . "'>".$data19['user_name']."</option>\n";}
+		echo "</select></td>
 	</tr></table>";
 
 echo"<table class='tbl-border' width='350px' style='vertical-align: top; margin: 0px auto;'>";

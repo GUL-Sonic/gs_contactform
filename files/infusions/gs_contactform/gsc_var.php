@@ -31,7 +31,6 @@ if (!defined("IN_FUSION") || !IN_FUSION)
 // Variablendefinition contactform.php//
 $gsc_ip = getenv("REMOTE_ADDR");
 $gsc_name = (isset($_POST['gsc_name'])) ? $_POST['gsc_name'] : "";
-
 $geb = (isset($_POST['geb'])) ? $_POST['geb'] : "";
 $firma = (isset($_POST['firma'])) ? $_POST['firma'] : "";
 $position = (isset($_POST['position'])) ? $_POST['position'] : "";
@@ -40,14 +39,15 @@ $plzort = (isset($_POST['plzort'])) ? $_POST['plzort'] : "";
 $tel = (isset($_POST['tel'])) ? $_POST['tel'] : "";
 $mobil = (isset($_POST['mobil'])) ? $_POST['mobil'] : "";
 $fax = (isset($_POST['fax'])) ? $_POST['fax'] : "";
+
 $web = (isset($_POST['web'])) ? $_POST['web'] : "";
 $userdef1 = (isset($_POST['userdef1'])) ? $_POST['userdef1'] : "";
 $userdef2 = (isset($_POST['userdef2'])) ? $_POST['userdef2'] : "";
 $userdef3 = (isset($_POST['userdef3'])) ? $_POST['userdef3'] : "";
 $userdef4 = (isset($_POST['userdef4'])) ? $_POST['userdef4'] : "";
-$geb = (isset($_POST['geb'])) ? $_POST['geb'] : "";
 
-//$gsc_geb = (isset($_POST['gsc_geb'])) ? $_POST['gsc_geb'] : "";
+$email_kopie = (isset($_POST['email_kopie'])) ? 1 : 0; 
+
 $gsc_geb_tag = (isset($_POST['gsc_geb_tag'])) ? $_POST['gsc_geb_tag'] : "";
 $gsc_geb_mon = (isset($_POST['gsc_geb_mon'])) ? $_POST['gsc_geb_mon'] : "";
 $gsc_geb_jahr = (isset($_POST['gsc_geb_jahr'])) ? $_POST['gsc_geb_jahr'] : "";
@@ -111,6 +111,11 @@ $err_userdef4 = (isset($_POST['err_userdef4'])) ? $_POST['err_userdef4'] : "";
 $err_betreff = (isset($_POST['err_betreff'])) ? $_POST['err_betreff'] : "";
 $err_text = (isset($_POST['err_text'])) ? $_POST['err_text'] : "";
 $err_captcha = (isset($_POST['err_captcha'])) ? $_POST['err_captcha'] : "";
+
+// Variablendefinition gsc_settings_panel.php
+$email_to = (isset($_POST['email_to'])) ? $_POST['email_to'] : "";
+$email_answer = (isset($_POST['email_answer'])) ? $_POST['email_answer'] : "";
+$pm_to = (isset($_POST['pm_to'])) ? $_POST['pm_to'] : "";
 
 // Variablendefinition spezieller Funktionen //
 $gespeichert = "<table cellpadding='0' cellspacing='1' class='tbl-border tbl_gsc'>\n<tr><td class='tbl2'><span class='gsc_positive'>" . $locale['gsc142'] . "</span></td></tr>\n</table>\n";

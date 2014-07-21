@@ -2,12 +2,14 @@
 
 // Infusionsbeschreibung
 $locale['gsc000']  = "Kontaktformular";
-$locale['gsc001']  = "1.0.1";
+$locale['gsc001']  = "1.1";
 $locale['gsc002']  = "Überarbeitetes Kontaktformular mit Speicherung der eingegangenen Anfragen";
 
 //Kontaktformularüberschrift
-$locale['gsc020']  = "Sie haben Fragen, W&uuml;nsche oder Anregungen? <br>Schreiben Sie uns, wir freuen uns auf Ihre Nachricht.";
-$locale['gsc021']  = "Als registriertes Mitglied dieser Seite k&ouml;nnen Sie mir auch <br>eine <a href='".BASEDIR."messages.php?msg_send=1' title='private Nachricht'>private Nachricht (PN)</a> senden.";
+$locale['gsc020']  = "Sie haben Fragen, W&uuml;nsche oder Anregungen?\nSchreiben Sie uns, wir freuen uns auf Ihre Nachricht.";
+$locale['gsc021']  = "Als registriertes Mitglied dieser Seite k&ouml;nnen Sie mir auch <br>eine ";
+$locale['gsc022']  = "Private Nachricht (PN) ";
+$locale['gsc023']  = "senden.";
 
 // Emailversandt
 $locale['gsc040']  = "Anfrage ueber das Kontaktformular Betreff: ";
@@ -15,6 +17,8 @@ $locale['gsc041']  = "Diese Anfrage wurde unter Verwendung der IP:";
 $locale['gsc042']  = "aufgegeben.";
 $locale['gsc043']  = "Ihre Anfrage wurde erfolgreich versandt,<br>wir werden uns in K&uuml;rze bei Ihnen melden.";
 $locale['gsc044']  = "Es trat ein Fehler beim versenden der Kontaktanfrage auf!<br>Bitte versuchen sie es sp&auml;ter erneut.";
+$locale['gsc045']  = "Kopie dieser Anfrage bitte auch an meine Emailadresse senden.";
+$locale['gsc046']  = "Ihre Anfrage auf ";
 
 // Kontaktfelder
 $locale['gsc060']  = "IP-Adresse:";
@@ -112,6 +116,10 @@ $locale['gsc240'] = "Betreff";
 
 // admin.php
 $locale['gsc260'] = "&Uuml;berschrift f&uuml;r das Kontaktformular";
+$locale['gsc261'] = "Emailadresse an die Kontaktanfragen versendet werden sollen:";
+$locale['gsc262'] = "Absenderadresse die bei <br><font color='blue'>\"Kopie an Verfasser\"</font><br>angegeben werden soll";
+$locale['gsc263'] = "PM bei Eingang einer Kontaktanfrage senden an: ";
+$locale['gsc264'] = "Keine PM bei Eingang einer Kontaktanfrage senden";
 
 // Verionsprüfung
 $locale['gsc300'] = "Versionspr&uuml;fung";

@@ -81,6 +81,9 @@ PRIMARY KEY  (id)
 $inf_newtable[4] = DB_GSC_SETTINGS . " (
 id int(11) NOT NULL auto_increment,
 form_header varchar(250) NOT NULL,
+email_to varchar (250) NOT NULL,
+email_answer varchar (250) NOT NULL,
+pm_to varchar (10) NOT NULL,
 geb_show BOOL NOT NULL,
 geb_requ BOOL NOT NULL,
 firma_show BOOL NOT NULL,
@@ -121,7 +124,7 @@ $inf_insertdbrow[2] = DB_GSC_FIELDS. " VALUES ('2','','','')";
 $inf_insertdbrow[3] = DB_GSC_FIELDS. " VALUES ('3','','','')";
 $inf_insertdbrow[4] = DB_GSC_FIELDS. " VALUES ('4','','','')";
 
-$inf_insertdbrow[5] = DB_GSC_SETTINGS . " SET form_header='".$locale['gsc020']."', geb_show='0', geb_requ='0', firma_show='0', firma_requ='0', position_show='0', position_requ='0', adress_show='0', adress_requ='0', plzort_show='0', plzort_requ='0', tel_show='0', tel_requ='0', mobil_show='0', mobil_requ='0', fax_show='0', fax_requ='0', web_show='0', web_requ='0', userdef1_show='0', userdef1_requ='0', userdef2_show='0', userdef2_requ='0', userdef3_show='0', userdef3_requ='0', userdef4_show='0', userdef4_requ='0',  version='" . $locale['gsc001'] . "'";
+$inf_insertdbrow[5] = DB_GSC_SETTINGS . " SET form_header='".$locale['gsc020']."', email_to='".$settings['siteemail']."', email_answer='".$settings['siteemail']."', pm_to='1', geb_show='0', geb_requ='0', firma_show='0', firma_requ='0', position_show='0', position_requ='0', adress_show='0', adress_requ='0', plzort_show='0', plzort_requ='0', tel_show='0', tel_requ='0', mobil_show='0', mobil_requ='0', fax_show='0', fax_requ='0', web_show='0', web_requ='0', userdef1_show='0', userdef1_requ='0', userdef2_show='0', userdef2_requ='0', userdef3_show='0', userdef3_requ='0', userdef4_show='0', userdef4_requ='0',  version='" . $locale['gsc001'] . "'";
 
 $inf_adminpanel[1] = array(
     "title" => $locale['gsc000'],

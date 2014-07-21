@@ -22,6 +22,7 @@
  if (!defined("IN_FUSION") || !IN_FUSION)
    die("Access denied!");
  
+ // Updateprüfung via cURL
  function cURLcheck() {
     if (function_exists("curl_exec"))
         return "curl";
@@ -62,6 +63,36 @@ if (cURLcheck()) {
     //$new_version = 1.0;
 }
 
+// Updateprüfung via fsockopen
+function latest_gsc_version()
+{
+	$url = "http://germanys-united-legends.de/gsc_version/version.txt";
+	$url_p = @parse_url($url);
+	$host = $url_p['host'];
+	$port = isset($url_p['port']) ? $url_p['port'] : 80;
+
+	$fp = @fsockopen($url_p['host'], $port, $errno, $errstr, 5);
+	if(!$fp) return false;
+
+	@fputs($fp, 'GET '.$url_p['path'].' HTTP/1.1'.chr(10));
+	@fputs($fp, 'HOST: '.$url_p['host'].chr(10));
+	@fputs($fp, 'Connection: close'.chr(10).chr(10));
+
+	$response = @fgets($fp, 1024);
+	$content = @fread($fp,1024);
+	$content = preg_replace("#(.*?)text/plain(.*?)$#is","$2",$content);
+	@fclose ($fp);
+
+	$content = preg_replace("/X-Pad: avoid browser bug/si", "", $content);
+
+	if(preg_match("#404#",$response)) return false;
+	else return trim($content);
+}
+
+	$version_new = latest_gsc_version();
+	//DEBUG
+    //$version_new = 1.0;
+
 //// Testsequenz für Versionsüberprüfung ////
 $data18 = dbarray(dbquery("SELECT *  FROM " . DB_GSC_SETTINGS . ""));
 
@@ -74,9 +105,7 @@ if (version_compare($new_version, $gsc_version, '<=') AND $new_version > 0) {
 	  <td><img src='" . INFUSIONS . "gs_contactform/images/version.gif' alt='up to date' title='" . $locale['gsc303'] . "(V." . $new_version . ")'/></td>
 	  </tr>
 	  </table>";
-} elseif ($gsc_version < $locale['gsc001']) {
-	require_once INFUSIONS . "gs_contactform/update/gsc_update.php";
-}
+} 
 
 else {
     if (!empty($new_version)) {
@@ -92,9 +121,37 @@ else {
     }
 }
 if (empty($new_version)) {
+
+	if (version_compare($version_new, $gsc_version, '<=') AND $version_new > 0) {
+    $ausgabe = "
+	  <table cellpadding='0' cellspacing='1'>
+	  <tr>
+	  <td><img src='" . INFUSIONS . "gs_contactform/images/version.gif' alt='up to date' title='" . $locale['gsc303'] . "(V." . $version_new . ")'/></td>
+	  </tr>
+	  </table>";
+	} 
+	
+	else {
+	if (!empty($version_new)) {
+        $ausgabe = "
+	<table cellpadding='0' cellspacing='1'>
+	<tr>
+	<td><img src='" . INFUSIONS . "gs_contactform/images/version_old.gif' alt='old version' /></td>
+	<td><span class='gsc_negative'>" . $locale['gsc302'] . ": " . $gsc_version . "</span><br />
+	<span class='gsc_positive'>" . $locale['gsc301'] . ": " . $version_new . "</span><br />
+	<span style='font-weight: bold;'>" . $locale['gsc304'] . ": </span><a href='http://gul-sonic.github.io/gs_contactform/' target='_blank' title='" . $locale['gsc306'] . "'><span style='font-weight: bold;'>" . $locale['gsc306'] . "</span></a></td>
+	</tr>
+	</table>";
+    }
+	}
+	if (empty($version_new)) {
     $ausgabe = "<br /><span class='gsc_negative'>" . $locale['gsc305'] . "!<br /></span><span style='font-weight: bold;'>" . $locale['gsc304'] . "</span> <a href='http://gul-sonic.github.io/gs_contactform/' target='_blank' title='" . $locale['gsc306'] . "'><span style='font-weight: bold;'>" . $locale['gsc306'] . "</span></a><br /><br />";
 }
+}
 
+if ($gsc_version < $locale['gsc001']) {
+	require_once INFUSIONS . "gs_contactform/update/gsc_update.php";
+}
 echo "<div align='center'>" . $ausgabe . "</div>";
 
 ?>
