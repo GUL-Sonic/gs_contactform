@@ -382,7 +382,7 @@ else {
 	<td>" . $locale['gsc063'] ."</td>";}
 	if($err_firma==1) {echo "<td> <input type='text' name='gsc_firma' style='width:200px; background-color:#FFDDDD;' maxlength='40' class='textbox' value='".$gsc_firma."' placeholder='" . $locale['gsc063'] ."' /></td>";}
 	else {echo "<td> <input type='text' name='gsc_firma' style='width:200px;' maxlength='40' class='textbox' value='".$gsc_firma."' placeholder='" . $locale['gsc063'] ."' /></td>";}
-	echo"<tr>";
+	echo"</tr>";
 	}
 	
 	if ($data['position_show'] == 1){ echo "
@@ -393,7 +393,7 @@ else {
 	<td>" . $locale['gsc064'] ."</td>";}
 	if($err_position==1) {echo "<td> <input type='text' name='gsc_position' style='width:200px; background-color:#FFDDDD;' maxlength='40' class='textbox' value='".$gsc_position."' placeholder='" . $locale['gsc064'] ."' /></td>";}
 	else {echo "<td> <input type='text' name='gsc_position' style='width:200px;' maxlength='40' class='textbox' value='".$gsc_position."' placeholder='" . $locale['gsc064'] ."' /></td>";}
-	echo"<tr>";
+	echo"</tr>";
 	}
 	
 	if ($data['adress_show'] == 1){ echo "
@@ -408,7 +408,7 @@ else {
 	else {echo "
 	<td> <input type='text' name='gsc_str' style='width:150px;' maxlength='40' class='textbox' value='".$gsc_str."' placeholder='" . $locale['gsc074'] ."' />
 	<input type='text' name='gsc_hnr' style='width:40px;' maxlength='10' class='textbox' value='".$gsc_hnr."' placeholder='" . $locale['gsc075'] ."' /></td>";}
-	echo"<tr>";
+	echo"</tr>";
 	}
 	
 	if ($data['plzort_show'] == 1){ echo "
@@ -423,7 +423,7 @@ else {
 	else {echo "
 	<td> <input type='text' name='gsc_plz' style='width:40px;' maxlength='5' class='textbox' value='".$gsc_plz."' placeholder='" . $locale['gsc076'] ."' />
 	<input type='text' name='gsc_ort' style='width:150px;' maxlength='40' class='textbox' value='".$gsc_ort."' placeholder='" . $locale['gsc077'] ."' /></td>";}
-	echo"<tr>";
+	echo"</tr>";
 	}
 	
 	if ($data['tel_show'] == 1){ echo "
@@ -438,7 +438,7 @@ else {
 	else {echo "
 	<td> <input type='text' name='gsc_tel_vor' style='width:40px;' maxlength='5' class='textbox' value='".$gsc_tel_vor."' placeholder='" . $locale['gsc076'] ."' />
 	<input type='text' name='gsc_tel_nr' style='width:50px;' maxlength='40' class='textbox' value='".$gsc_tel_nr."' placeholder='" . $locale['gsc076'] ."' /></td>";}
-	echo"<tr>";
+	echo"</tr>";
 	}
 	
 	if ($data['mobil_show'] == 1){ echo "
@@ -453,7 +453,7 @@ else {
 	else {echo "
 	<td> <input type='text' name='gsc_mobil_vor' style='width:40px;' maxlength='5' class='textbox' value='".$gsc_mobil_vor."' placeholder='" . $locale['gsc076'] ."' />
 	<input type='text' name='gsc_mobil_nr' style='width:50px;' maxlength='40' class='textbox' value='".$gsc_mobil_nr."' placeholder='" . $locale['gsc076'] ."' /></td>";}
-	echo"<tr>";
+	echo"</tr>";
 	}
 	
 	if ($data['fax_show'] == 1){ echo "
@@ -468,7 +468,7 @@ else {
 	else {echo "
 	<td> <input type='text' name='gsc_fax_vor' style='width:40px;' maxlength='5' class='textbox' value='".$gsc_fax_vor."' placeholder='" . $locale['gsc076'] ."' />
 	<input type='text' name='gsc_fax_nr' style='width:50px;' maxlength='40' class='textbox' value='".$gsc_fax_nr."' placeholder='" . $locale['gsc076'] ."' /></td>";}
-	echo"<tr>";
+	echo"</tr>";
 	}
 	
 	echo "
@@ -487,7 +487,7 @@ else {
 	<td>" . $locale['gsc071'] ."</td>";}
 	if($err_web==1) {echo "<td> <input type='text' name='gsc_web' style='width:200px; background-color:#FFDDDD;' maxlength='40' class='textbox' value='".$gsc_web."' placeholder='http://yourdomain.org' /></td>";}
 	else {echo "<td> <input type='text' name='gsc_web' style='width:200px;' maxlength='40' class='textbox' value='".$gsc_web."' placeholder='http://yourdomain.org' /></td>";}
-	echo"<tr>";
+	echo"</tr>";
 	}
 	
 	if ($data['userdef1_show'] == 1){ echo "
@@ -498,7 +498,7 @@ else {
 	<td>" . $data1['field_name'] ."</td>";}
 	if($err_userdef1==1) {echo "<td> <input type='text' name='gsc_userdef1' style='width:200px; background-color:#FFDDDD;' maxlength='40' class='textbox' value='".$gsc_userdef1."' placeholder='" . $data1['field_place'] ."' /></td>";}
 	else {echo "<td> <input type='text' name='gsc_userdef1' style='width:200px;' maxlength='40' class='textbox' value='".$gsc_userdef1."' placeholder='" . $data1['field_place'] ."' /></td>";}
-	echo"<tr>";
+	echo"</tr>";
 	}
 	
 	if ($data['userdef2_show'] == 1){ echo "
@@ -509,7 +509,7 @@ else {
 	<td>" . $data2['field_name'] ."</td>";}
 	if($err_userdef2==1) {echo "<td> <input type='text' name='gsc_userdef2' style='width:200px; background-color:#FFDDDD;' maxlength='40' class='textbox' value='".$gsc_userdef2."' placeholder='" . $data2['field_place'] ."' /></td>";}
 	else {echo "<td> <input type='text' name='gsc_userdef2' style='width:200px;' maxlength='40' class='textbox' value='".$gsc_userdef2."' placeholder='" . $data2['field_place'] ."' /></td>";}
-	echo"<tr>";
+	echo"</tr>";
 	}
 	
 	if ($data['userdef3_show'] == 1){ echo "
@@ -520,7 +520,7 @@ else {
 	<td>" . $data3['field_name'] ."</td>";}
 	if($err_userdef3==1) {echo "<td> <input type='text' name='gsc_userdef3' style='width:200px; background-color:#FFDDDD;' maxlength='40' class='textbox' value='".$gsc_userdef3."' placeholder='" . $data3['field_place'] ."' /></td>";}
 	else {echo "<td> <input type='text' name='gsc_userdef3' style='width:200px;' maxlength='40' class='textbox' value='".$gsc_userdef3."' placeholder='" . $data3['field_place'] ."' /></td>";}
-	echo"<tr>";
+	echo"</tr>";
 	}
 	
 	if ($data['userdef4_show'] == 1){ echo "
@@ -531,7 +531,7 @@ else {
 	<td>" . $data4['field_name'] ."</td>";}
 	if($err_userdef4==1) {echo "<td> <input type='text' name='gsc_userdef4' style='width:200px; background-color:#FFDDDD;' maxlength='40' class='textbox' value='".$gsc_userdef4."' placeholder='" . $data4['field_place'] ."' /></td>";}
 	else {echo "<td> <input type='text' name='gsc_userdef4' style='width:200px;' maxlength='40' class='textbox' value='".$gsc_userdef4."' placeholder='" . $data4['field_place'] ."' /></td>";}
-	echo"<tr>";
+	echo"</tr>";
 	}
 	
 	$result = dbquery("SELECT * FROM " . DB_GSC_SUBJECT . " ORDER BY sub_name");
