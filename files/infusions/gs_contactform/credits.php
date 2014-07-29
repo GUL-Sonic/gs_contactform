@@ -138,7 +138,7 @@ und unterliegt als kostenloses php-fusion Add-on den <a href='http://www.gnu.de/
     Absenderemail der Kopie ist nun frei w&auml;hlbar (Seitenemail als Standard)<br>
     Versionspr&uuml;fung nun &uuml;ber cURL und falls das fehlschl&auml;gt (Strato ^.^) dann erfolgt die Versionspr&uuml;fung &uuml;ber fsockopen.<br>
     Updatescript wurde erweitert<br>
-    Neue Versionsnummer 1.1</ul>
+    Neue Versionsnummer 1.1</ul></p>
 
 <p><strong>Changelog V1.2</strong>
 
@@ -155,7 +155,7 @@ und unterliegt als kostenloses php-fusion Add-on den <a href='http://www.gnu.de/
 	Dezentes &copy; Symbol auf allen &ouml;ffentlich zug&auml;nglichen Seiten ersetzt den bisherigen Text<br>
 	Credits hinzugef&uuml;gt<br>
     Updatescript wurde erweitert<br>
-    Neue Versionsnummer 1.2</ul>";
+    Neue Versionsnummer 1.2</ul></p>";
 	
 closetable();
 
