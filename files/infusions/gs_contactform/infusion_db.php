@@ -32,4 +32,10 @@ if (!defined("DB_GSC_FIELDS")) {
 if (!defined("DB_GSC_SETTINGS")) {
 	define("DB_GSC_SETTINGS", DB_PREFIX."gsc_settings");
 }
+if (!defined("DB_GSC_ABOUT")) {
+	define("DB_GSC_ABOUT", DB_PREFIX."gsc_about");
+}
+if (!defined("DB_GSC_IMPRESSUM")) {
+	define("DB_GSC_IMPRESSUM", DB_PREFIX."gsc_impressum");
+}
 ?>

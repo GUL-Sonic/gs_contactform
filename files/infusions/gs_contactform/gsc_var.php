@@ -112,10 +112,59 @@ $err_betreff = (isset($_POST['err_betreff'])) ? $_POST['err_betreff'] : "";
 $err_text = (isset($_POST['err_text'])) ? $_POST['err_text'] : "";
 $err_captcha = (isset($_POST['err_captcha'])) ? $_POST['err_captcha'] : "";
 
+$err_head = (isset($_POST['err_head'])) ? $_POST['err_head'] : "";
+
 // Variablendefinition gsc_settings_panel.php
 $email_to = (isset($_POST['email_to'])) ? $_POST['email_to'] : "";
 $email_answer = (isset($_POST['email_answer'])) ? $_POST['email_answer'] : "";
 $pm_to = (isset($_POST['pm_to'])) ? $_POST['pm_to'] : "";
+
+// Variablendefinition gsc_ueber_mich.php
+$title = (isset($_POST['title'])) ? $_POST['title'] : "";
+$about = (isset($_POST['about'])) ? $_POST['about'] : "";
+
+// Variablendefinition gsc_impressum.php
+
+$firm_firma = (isset($_POST['firm_firma'])) ? $_POST['firm_firma'] : "";
+$firm_name = (isset($_POST['firm_name'])) ? $_POST['firm_name'] : "";
+$firm_str = (isset($_POST['firm_str'])) ? $_POST['firm_str'] : "";
+$firm_hnr = (isset($_POST['firm_hnr'])) ? $_POST['firm_hnr'] : "";
+$firm_plz = (isset($_POST['firm_plz'])) ? $_POST['firm_plz'] : "";
+$firm_ort = (isset($_POST['firm_ort'])) ? $_POST['firm_ort'] : "";
+$firm_tel_vor = (isset($_POST['firm_tel_vor'])) ? $_POST['firm_tel_vor'] : "";
+$firm_tel_nr = (isset($_POST['firm_tel_nr'])) ? $_POST['firm_tel_nr'] : "";
+$firm_mobil_vor = (isset($_POST['firm_mobil_vor'])) ? $_POST['firm_mobil_vor'] : "";
+$firm_mobil_nr = (isset($_POST['firm_mobil_nr'])) ? $_POST['firm_mobil_nr'] : "";
+$firm_fax_vor = (isset($_POST['firm_fax_vor'])) ? $_POST['firm_fax_vor'] : "";
+$firm_fax_nr = (isset($_POST['firm_fax_nr'])) ? $_POST['firm_fax_nr'] : "";
+$firm_email = (isset($_POST['firm_email'])) ? $_POST['firm_email'] : "";
+$firm_ustid = (isset($_POST['firm_ustid'])) ? $_POST['firm_ustid'] : "";
+$firm_title_1= (isset($_POST['firm_title_1'])) ? $_POST['firm_title_1'] : "";
+$firm_field_1= (isset($_POST['firm_field_1'])) ? $_POST['firm_field_1'] : "";
+$firm_title_2= (isset($_POST['firm_title_2'])) ? $_POST['firm_title_2'] : "";
+$firm_field_2= (isset($_POST['firm_field_2'])) ? $_POST['firm_field_2'] : "";
+$firm_title_3= (isset($_POST['firm_title_3'])) ? $_POST['firm_title_3'] : "";
+$firm_field_3= (isset($_POST['firm_field_3'])) ? $_POST['firm_field_3'] : "";
+$firm_title_4= (isset($_POST['firm_title_4'])) ? $_POST['firm_title_4'] : "";
+$firm_field_4= (isset($_POST['firm_field_4'])) ? $_POST['firm_field_4'] : "";
+$impr_head = (isset($_POST['impr_head'])) ? $_POST['impr_head'] : "";
+$impr_name = (isset($_POST['impr_name'])) ? $_POST['impr_name'] : "";
+$impr_str = (isset($_POST['impr_str'])) ? $_POST['impr_str'] : "";
+$impr_hnr = (isset($_POST['impr_hnr'])) ? $_POST['impr_hnr'] : "";
+$impr_plz = (isset($_POST['impr_plz'])) ? $_POST['impr_plz'] : "";
+$impr_ort = (isset($_POST['impr_ort'])) ? $_POST['impr_ort'] : "";
+$impr_tel_vor = (isset($_POST['impr_tel_vor'])) ? $_POST['impr_tel_vor'] : "";
+$impr_tel_nr = (isset($_POST['impr_tel_nr'])) ? $_POST['impr_tel_nr'] : "";
+$impr_mobil_vor = (isset($_POST['impr_mobil_vor'])) ? $_POST['impr_mobil_vor'] : "";
+$impr_mobil_nr = (isset($_POST['impr_mobil_nr'])) ? $_POST['impr_mobil_nr'] : "";
+$impr_fax_vor = (isset($_POST['impr_fax_vor'])) ? $_POST['impr_fax_vor'] : "";
+$impr_fax_nr = (isset($_POST['impr_fax_nr'])) ? $_POST['impr_fax_nr'] : "";
+$impr_email = (isset($_POST['impr_email'])) ? $_POST['impr_email'] : "";
+
+$impr_disclaimer = (isset($_POST['impr_disclaimer'])) ? $_POST['impr_disclaimer'] : "";
+
+// Variablendefinition gsc_agb.php
+$license_agreement = (isset($_POST['license_agreement'])) ? $_POST['license_agreement'] : "";
 
 // Variablendefinition spezieller Funktionen //
 $gespeichert = "<table cellpadding='0' cellspacing='1' class='tbl-border tbl_gsc'>\n<tr><td class='tbl2'><span class='gsc_positive'>" . $locale['gsc142'] . "</span></td></tr>\n</table>\n";

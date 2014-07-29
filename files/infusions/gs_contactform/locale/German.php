@@ -2,7 +2,7 @@
 
 // Infusionsbeschreibung
 $locale['gsc000']  = "Kontaktformular";
-$locale['gsc001']  = "1.1";
+$locale['gsc001']  = "1.2";
 $locale['gsc002']  = "&Uuml;erarbeitetes Kontaktformular mit Speicherung der eingegangenen Anfragen";
 
 //Kontaktformular�berschrift
@@ -21,8 +21,8 @@ $locale['gsc045']  = "Kopie dieser Anfrage bitte auch an meine Emailadresse send
 $locale['gsc046']  = "Ihre Anfrage auf ";
 
 // Kontaktfelder
-$locale['gsc060']  = "IP-Adresse:";
-$locale['gsc061']  = "Vorname / Nachname:";
+$locale['gsc060']  = "IP-Adresse";
+$locale['gsc061']  = "Vorname / Nachname";
 $locale['gsc062']  = "Geburtsdatum";
 $locale['gsc063']  = "Firma / Organisation";
 $locale['gsc064']  = "Position / Funktion";
@@ -31,14 +31,15 @@ $locale['gsc066']  = "Postleizahl / Ort";
 $locale['gsc067']  = "Telefon";
 $locale['gsc068']  = "Mobil";
 $locale['gsc069']  = "Fax";
-$locale['gsc070']  = "E-Mail Adresse:";
+$locale['gsc070']  = "E-Mail Adresse";
 $locale['gsc071']  = "Web";
-$locale['gsc072']  = "Betreff:";
-$locale['gsc073']  = "Nachricht:";
+$locale['gsc072']  = "Betreff";
+$locale['gsc073']  = "Nachricht";
 $locale['gsc074']  = "Stra&szlig;enname";
 $locale['gsc075']  = "100b";
 $locale['gsc076']  = "12345";
 $locale['gsc077']  = "Ortsname";
+$locale['gsc078']  = "Logo";
 
 // Kontaktformular-Fu�
 $locale['gsc080']  = "Zeichen verbleibend";
@@ -84,6 +85,7 @@ $locale['gsc148'] = "ansehen";
 $locale['gsc150'] = "Der Eintrag ist bereits vorhanden";
 $locale['gsc151'] = "hinzuf&uuml;gen";
 $locale['gsc152'] = "schlie&szlig;en";
+$locale['gsc153'] = "Seitenumbruch";
 
 // �berschriften
 $locale['gsc160'] = "Einstellungen";
@@ -91,6 +93,11 @@ $locale['gsc161'] = "Kontaktfelder - Verwaltung";
 $locale['gsc162'] = "Eigene Kontaktfelder";
 $locale['gsc163'] = "Eigene Betreffs";
 $locale['gsc164'] = "Erhaltene Anfragen";
+$locale['gsc165'] = "Impressum";
+$locale['gsc166'] = "Disclaimer-Einstellungen";
+$locale['gsc167'] = "Disclaimer";
+$locale['gsc168'] = "AGB / Nutzungsbedingungen";
+$locale['gsc169'] = "Credits";
 
 // settings.php
 $locale['gsc180'] = "Kontaktfeld";
@@ -117,7 +124,7 @@ $locale['gsc240'] = "Betreff";
 // admin.php
 $locale['gsc260'] = "&Uuml;berschrift f&uuml;r das Kontaktformular";
 $locale['gsc261'] = "Emailadresse an die Kontaktanfragen versendet werden sollen:";
-$locale['gsc262'] = "Absenderadresse die bei <br><font color='blue'>\"Kopie an Verfasser\"</font><br>angegeben werden soll";
+$locale['gsc262'] = "Absenderadresse die bei <br>\"Kopie an Verfasser\"<br>angegeben werden soll";
 $locale['gsc263'] = "PM bei Eingang einer Kontaktanfrage senden an: ";
 $locale['gsc264'] = "Keine PM bei Eingang einer Kontaktanfrage senden";
 
@@ -136,4 +143,33 @@ $locale['gsc309'] = "Es sind Fehler w&auml;hrend des Update-Vorgangs aufgetreten
 $locale['gsc310'] = "Update erfolgreich";
 $locale['gsc311'] = "zur&uuml;ck";
 $locale['gsc312'] = "Neueste Version von github.com downloaden";
+$locale['gsc313'] = "<font color='red'><strong>Hinweis:</strong></font> <font color='black'>Die contactform.php befindet sich ab jetzt nicht mehr im root-Verzeichnis sondern im Verzeichnis:<br> <strong>/infusions/gs_contactform/</strong> Bitte l&ouml;schen sie die alte contactform.php aus Ihrem root-Verzeichnis!</font>";
+
+// ueber....php
+$locale['gsc320'] = "&uuml;ber...";
+$locale['gsc321'] = "Seitentitel";
+$locale['gsc322'] = "Hier haben Sie die M&ouml;glichkeit sich selbst oder Ihre Webseite genauer zu beschreiben";
+
+// gsc_impressum.php
+$locale['gsc340'] = "Verantwortlich f&uuml;r diese Seite";
+$locale['gsc341'] = "Verantwortlich im Sinne § 6 Teledienstegesetz (TDG) und § 10 Mediendienste-Staatsvertrag (MDStV), Betreiber der Internetseite, Redaktion, Community, Content Page/Streams";
+$locale['gsc342'] = "Ust.-ID";
+$locale['gsc343'] = "Bitte geben Sie eine &Uuml;berschrift f&uuml;r Ihr Impressum ein.";
+$locale['gsc344'] = "Letzte &Auml;nderung am:";
+$locale['gsc345'] = "Mail";
+
+// gsc_disclaimer.php
+$locale['gsc360'] = "Zeige den Disclaimer und die Standard AGB unterhalb des Impressums an";
+$locale['gsc361'] = "Zeige nur den Disclaimer unterhalb des Impressums an";
+$locale['gsc362'] = "Zeige nur die Standard AGB unterhalb des Impressums an";
+$locale['gsc363'] = "Zeige weder den Disclaimer noch die Standard AGB unterhalb des Impressums an";
+
+// Navigationslinks
+$locale['gsc380'] = "Sie k&oumlnnen nun einen Link zum <strong>\"Impressum\"</strong> unter Verwendung nachfolgender Adresse setzen: ";
+$locale['gsc381'] = "Sie k&oumlnnen nun einen Link zur Seite: "; 
+$locale['gsc382'] = " unter Verwendung nachfolgender Adresse setzen: ";
+$locale['gsc383'] = "Sie k&oumlnnen nun einen Link zu den <strong>\"AGB\"</strong> unter Verwendung nachfolgender Adresse setzen: ";
+$locale['gsc384'] = "Bei Verwendung des php-fusion eigenen Navigationspanels klicken Sie ";
+$locale['gsc385'] = "hier";
+$locale['gsc386'] = "Link-Status";
 ?>

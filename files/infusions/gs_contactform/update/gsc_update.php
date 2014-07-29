@@ -41,6 +41,18 @@ switch ($gsc_version):
 	</table>";
 	break;
 	
+	case "1.1":
+	$ausgabe= "
+	<table cellpadding='0' cellspacing='1'>
+	<tr>
+	<td style='background-color:green'><a href='".INFUSIONS."gs_contactform/update/update_from_v1.1.php".$aidlink."'><strong><font color='white'>".$locale['gsc306'].": 1.1 => 1.2</font></strong></a></td>
+	</tr>
+	<tr>
+	<td>".$locale['gsc313']."</td>
+	</tr>
+	</table>";
+	break;
+	
 	default :
 	$uptodate = 1;
 	

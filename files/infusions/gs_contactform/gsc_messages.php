@@ -21,9 +21,9 @@
 require_once "../../maincore.php";
 require_once THEMES . "templates/admin_header.php";
 
-include INFUSIONS . "gs_contactform/infusion_db.php";
-include_once INFUSIONS . "gs_contactform/gsc_functions.php";
-include INFUSIONS . "gs_contactform/gsc_var.php";
+if (!iADMIN){
+    redirect("../../index.php");
+}
 
 if (file_exists(INFUSIONS . "gs_contactform/locale/" . $settings['locale'] . ".php")) {
     include INFUSIONS . "gs_contactform/locale/" . $settings['locale'] . ".php";
@@ -31,17 +31,17 @@ if (file_exists(INFUSIONS . "gs_contactform/locale/" . $settings['locale'] . ".p
     include INFUSIONS . "gs_contactform/locale/German.php";
 }
 
-if (!iADMIN){
-    redirect("../../index.php");
-}
+include INFUSIONS . "gs_contactform/infusion_db.php";
+include INFUSIONS . "gs_contactform/gsc_functions.php";
+include INFUSIONS . "gs_contactform/gsc_var.php";
 	
-opentable($locale['gsc160']);
+opentable('<center>'.$locale['gsc160'].'</center>');
 
 require_once "gsc_navigation.php";
 
 closetable();
 
-opentable($locale['gsc164']);
+opentable('<center>'.$locale['gsc164'].'</center>');
 
 $data14 = dbarray(dbquery("SELECT * FROM " . DB_GSC_FIELDS . " WHERE id='1'"));
 $data15 = dbarray(dbquery("SELECT * FROM " . DB_GSC_FIELDS . " WHERE id='2'"));

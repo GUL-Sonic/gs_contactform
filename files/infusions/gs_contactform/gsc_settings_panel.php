@@ -31,16 +31,16 @@ if (file_exists(INFUSIONS . "gs_contactform/locale/" . $settings['locale'] . ".p
 }
 
 include INFUSIONS . "gs_contactform/infusion_db.php";	
-include_once INFUSIONS . "gs_contactform/gsc_functions.php";
-include_once INFUSIONS . "gs_contactform/gsc_var.php";
+include INFUSIONS . "gs_contactform/gsc_functions.php";
+include INFUSIONS . "gs_contactform/gsc_var.php";
 
-opentable($locale['gsc160']);
+opentable('<center>'.$locale['gsc160'].'</center>');
 
 require_once "gsc_navigation.php";
 
 closetable();
 
-opentable($locale['gsc161']);
+opentable('<center>'.$locale['gsc161'].'</center>');
 
 if (isset($_POST['update'])) {
     dbquery("UPDATE " . DB_GSC_SETTINGS . " SET

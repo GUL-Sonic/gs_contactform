@@ -21,8 +21,8 @@
 
  if (!defined("IN_FUSION") || !IN_FUSION)
    die("Access denied!");
- 
- // Updateprüfung via cURL
+   
+ // Updateprüfung mit cURL //
  function cURLcheck() {
     if (function_exists("curl_exec"))
         return "curl";
@@ -58,12 +58,16 @@ function getTag($use, $url) {
 if (cURLcheck()) {
     $url = "https://api.github.com/repos/GUL-Sonic/gs_contactform/releases";
     $file_content = getTag(cURLcheck(), $url);
+	if (isset($file_content['0'])){
     $new_version = $file_content['0']['tag_name'];
-    //DEBUG
+    } else {
+	$new_version = "";
+	}
+	//DEBUG
     //$new_version = 1.0;
 }
 
-// Updateprüfung via fsockopen
+// Updateprüfung mit fsockopen //
 function latest_gsc_version()
 {
 	$url = "http://germanys-united-legends.de/gsc_version/version.txt";
@@ -93,7 +97,7 @@ function latest_gsc_version()
 	//DEBUG
     //$version_new = 1.0;
 
-//// Testsequenz für Versionsüberprüfung ////
+// Updateprüfung Ausgabe //
 $data18 = dbarray(dbquery("SELECT *  FROM " . DB_GSC_SETTINGS . ""));
 
 $gsc_version = $data18['version'];

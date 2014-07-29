@@ -21,9 +21,9 @@
 require_once "../../maincore.php";
 require_once THEMES . "templates/admin_header.php";
 
-include INFUSIONS . "gs_contactform/infusion_db.php";
-include_once INFUSIONS . "gs_contactform/gsc_functions.php";
-include INFUSIONS . "gs_contactform/gsc_var.php";
+if (!iADMIN){
+    redirect("../../index.php");
+}
 
 if (file_exists(INFUSIONS . "gs_contactform/locale/" . $settings['locale'] . ".php")) {
     include INFUSIONS . "gs_contactform/locale/" . $settings['locale'] . ".php";
@@ -31,17 +31,17 @@ if (file_exists(INFUSIONS . "gs_contactform/locale/" . $settings['locale'] . ".p
     include INFUSIONS . "gs_contactform/locale/German.php";
 }
 
-if (!iADMIN){
-    redirect("../../index.php");
-}
+include INFUSIONS . "gs_contactform/infusion_db.php";
+include INFUSIONS . "gs_contactform/gsc_functions.php";
+include INFUSIONS . "gs_contactform/gsc_var.php";
 
-opentable($locale['gsc160']);
+opentable('<center>'.$locale['gsc160'].'</center>');
 
 require_once "gsc_navigation.php";
 
 closetable();
 
-opentable($locale['gsc163']);
+opentable('<center>'.$locale['gsc163'].'</center>');
 
 if (isset($_POST['save'])) {
     if ($_POST['sub_name'] == '') {
@@ -78,7 +78,7 @@ if ((isset($_GET['edit'])) != '') {
 	
 	<tr>
 	<td width='200px'>" . $locale['gsc072'] . "</td>
-	<td class='tbl1'><input name='sub_name' class='textbox' value='$sub_name' maxlength='100' style='width:100%;'></td>
+	<td class='tbl1'><input name='sub_name' class='textbox' value='$sub_name' maxlength='100' style='width:98%;'></td>
 	</tr>";
 	if ($edit != "") {
     echo "<td align='center' class='tbl2' colspan='2'><input type='hidden' name='edit' value='$edit'><input type='submit' name='update' class='button' value='" . $locale['gsc141'] . "'></td>";
