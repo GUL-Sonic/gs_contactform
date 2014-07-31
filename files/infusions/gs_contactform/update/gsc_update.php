@@ -47,9 +47,6 @@ switch ($gsc_version):
 	<tr>
 	<td style='background-color:green'><a href='".INFUSIONS."gs_contactform/update/update_from_v1.1.php".$aidlink."'><strong><font color='white'>".$locale['gsc306'].": 1.1 => 1.2</font></strong></a></td>
 	</tr>
-	<tr>
-	<td>".$locale['gsc313']."</td>
-	</tr>
 	</table>";
 	break;
 	

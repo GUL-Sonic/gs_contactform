@@ -309,7 +309,7 @@ $data21 = dbarray(dbquery("SELECT * FROM " . DB_GSC_IMPRESSUM . " WHERE id='1'")
 
 closetable();
 
-include_once INFUSIONS . "gs_contactform/gsc_versionschecker.php";
+//include_once INFUSIONS . "gs_contactform/gsc_versionschecker.php";
 
 include INFUSIONS . "gs_contactform/gsc_copyright.php";
 

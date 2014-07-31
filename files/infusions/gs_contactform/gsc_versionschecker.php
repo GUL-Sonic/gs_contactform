@@ -60,11 +60,11 @@ if (cURLcheck()) {
     $file_content = getTag(cURLcheck(), $url);
 	if (isset($file_content['0'])){
     $new_version = $file_content['0']['tag_name'];
+	//DEBUG
+    //$new_version = "";
     } else {
 	$new_version = "";
-	}
-	//DEBUG
-    //$new_version = 1.0;
+	}	
 }
 
 // Updateprüfung mit fsockopen //
@@ -92,10 +92,9 @@ function latest_gsc_version()
 	if(preg_match("#404#",$response)) return false;
 	else return trim($content);
 }
-
 	$version_new = latest_gsc_version();
 	//DEBUG
-    //$version_new = 1.0;
+    //$version_new = "";
 
 // Updateprüfung Ausgabe //
 $data18 = dbarray(dbquery("SELECT *  FROM " . DB_GSC_SETTINGS . ""));
@@ -104,9 +103,9 @@ $gsc_version = $data18['version'];
 $ausgabe = '';
 if (version_compare($new_version, $gsc_version, '<=') AND $new_version > 0) {
     $ausgabe = "
-	  <table cellpadding='0' cellspacing='1'>
+	  <table border ='1' cellpadding='0' cellspacing='1'>
 	  <tr>
-	  <td><img src='" . INFUSIONS . "gs_contactform/images/version.gif' alt='up to date' title='" . $locale['gsc303'] . "(V." . $new_version . ")'/></td>
+	  <td align='center'><img src='" . INFUSIONS . "gs_contactform/images/version.gif' alt='up to date' title='" . $locale['gsc303'] . "(V." . $new_version . ")'/></td>
 	  </tr>
 	  </table>";
 } 
@@ -125,12 +124,13 @@ else {
     }
 }
 if (empty($new_version)) {
+	if(function_exists('fsockopen')) {
 
 	if (version_compare($version_new, $gsc_version, '<=') AND $version_new > 0) {
     $ausgabe = "
-	  <table cellpadding='0' cellspacing='1'>
+	  <table border ='1' cellpadding='0' cellspacing='1'>
 	  <tr>
-	  <td><img src='" . INFUSIONS . "gs_contactform/images/version.gif' alt='up to date' title='" . $locale['gsc303'] . "(V." . $version_new . ")'/></td>
+	  <td align='center'><img src='" . INFUSIONS . "gs_contactform/images/version.gif' alt='up to date' title='" . $locale['gsc303'] . "(V." . $version_new . ")'/></td>
 	  </tr>
 	  </table>";
 	} 
@@ -148,11 +148,11 @@ if (empty($new_version)) {
 	</table>";
     }
 	}
+	}
 	if (empty($version_new)) {
     $ausgabe = "<br /><span class='gsc_negative'>" . $locale['gsc305'] . "!<br /></span><span style='font-weight: bold;'>" . $locale['gsc304'] . "</span> <a href='http://gul-sonic.github.io/gs_contactform/' target='_blank' title='" . $locale['gsc306'] . "'><span style='font-weight: bold;'>" . $locale['gsc306'] . "</span></a><br /><br />";
 }
 }
-
 if ($gsc_version < $locale['gsc001']) {
 	require_once INFUSIONS . "gs_contactform/update/gsc_update.php";
 }

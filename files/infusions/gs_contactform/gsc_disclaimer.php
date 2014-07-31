@@ -116,7 +116,7 @@ echo "
 
 closetable();
 
-include_once INFUSIONS . "gs_contactform/gsc_versionschecker.php";
+//include_once INFUSIONS . "gs_contactform/gsc_versionschecker.php";
 
 include INFUSIONS . "gs_contactform/gsc_copyright.php";
 

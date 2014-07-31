@@ -68,6 +68,7 @@ $locale['gsc131'] = "Bitte geben Sie die Adresse Ihrer Webseite ein.";
 $locale['gsc132'] = "Sie haben keinen Betreff angegeben.";
 $locale['gsc133'] = "Sie haben keine Nachricht eingegeben.";
 $locale['gsc134'] = "Der Sicherheitscode stimmt nicht &uuml;berein.";
+$locale['gsc135'] = "Die eingegebene URL ist fehlerhaft. Erlaubtes Format = http://yourdomain.org";
 
 // Funktionen
 $locale['gsc140'] = "bearbeiten";
@@ -143,7 +144,6 @@ $locale['gsc309'] = "Es sind Fehler w&auml;hrend des Update-Vorgangs aufgetreten
 $locale['gsc310'] = "Update erfolgreich";
 $locale['gsc311'] = "zur&uuml;ck";
 $locale['gsc312'] = "Neueste Version von github.com downloaden";
-$locale['gsc313'] = "<font color='red'><strong>Hinweis:</strong></font> <font color='black'>Die contactform.php befindet sich ab jetzt nicht mehr im root-Verzeichnis sondern im Verzeichnis:<br> <strong>/infusions/gs_contactform/</strong> Bitte l&ouml;schen sie die alte contactform.php aus Ihrem root-Verzeichnis!</font>";
 
 // ueber....php
 $locale['gsc320'] = "&uuml;ber...";

@@ -40,16 +40,16 @@ require_once "gsc_navigation.php";
 closetable();
 
 $linkname0 = $locale['gsc000'];
-$linkurl0 = "infusions/gs_contactform/contactform.php";
+$linkurl0 = "contactform.php";
 $linkname1 = "AGB";
-$linkurl1 = "infusions/gs_contactform/agb.php";
+$linkurl1 = "agb.php";
 $linkname2 = "Disclaimer";
-$linkurl2 = "infusions/gs_contactform/disclaimer.php";
-$linkurl3 = "infusions/gs_contactform/impressum.php";
+$linkurl2 = "disclaimer.php";
 $linkname3 = "Impressum";
-$linkurl4 = "infusions/gs_contactform/ueber.php";
+$linkurl3 = "impressum.php";
 $data23 = dbarray(dbquery("SELECT * FROM " . DB_GSC_ABOUT . " WHERE id='1'"));	
 $linkname4 = $data23['title'];
+$linkurl4 = "ueber.php";
 
 if (isset($_GET['status']) && !isset($message)) {
 	if ($_GET['status'] == "sn") {
@@ -154,7 +154,7 @@ closetable();
 if ((isset($_GET['action']) && $_GET['action'] == "new0")) {
 
 		$link_name = $linkname0 ;
-		$link_url = $linkurl0;
+		$link_url = "infusions/gs_contactform/".$linkurl0;
 		$link_visibility = "";
 		$link_order = "";
 		$pos1_check = " checked='checked'";
@@ -206,7 +206,7 @@ closetable();
 if ((isset($_GET['action']) && $_GET['action'] == "new1")) {
 
 		$link_name = $linkname1 ;
-		$link_url = $linkurl1;
+		$link_url = "infusions/gs_contactform/".$linkurl1;
 		$link_visibility = "";
 		$link_order = "";
 		$pos1_check = " checked='checked'";
@@ -258,7 +258,7 @@ closetable();
 if ((isset($_GET['action']) && $_GET['action'] == "new2")) {
 
 		$link_name = $linkname2 ;
-		$link_url = $linkurl2;
+		$link_url = "infusions/gs_contactform/".$linkurl2;
 		$link_visibility = "";
 		$link_order = "";
 		$pos1_check = " checked='checked'";
@@ -310,7 +310,7 @@ closetable();
 if ((isset($_GET['action']) && $_GET['action'] == "new3")) {
 
 		$link_name = $linkname3 ;
-		$link_url = $linkurl3;
+		$link_url = "infusions/gs_contactform/".$linkurl3;
 		$link_visibility = "";
 		$link_order = "";
 		$pos1_check = " checked='checked'";
@@ -362,7 +362,7 @@ closetable();
 if ((isset($_GET['action']) && $_GET['action'] == "new4")) {
 
 		$link_name = $linkname4 ;
-		$link_url = $linkurl4;
+		$link_url = "infusions/gs_contactform/".$linkurl4;
 		$link_visibility = "";
 		$link_order = "";
 		$pos1_check = " checked='checked'";
@@ -411,7 +411,7 @@ closetable();
 
 opentable('<center>'.$locale['gsc386'].'</center>');
 
-echo "<div id='info'></div>\n";
+echo "<div id='info_gsc'></div>\n";
 echo "<div style='width:500px;' class='panels tbl-border center floatfix'><div class='tbl2'>\n";
 echo "<div style='float:left; padding-left:30px;'><strong>".$locale['440']."</strong></div>\n";
 echo "<div style='float:right; width:100px; text-align:center;'><strong>".$locale['443']."</strong></div>\n";
@@ -636,7 +636,7 @@ echo "</ul>\n</div>";
 }
 closetable();
 
-include_once INFUSIONS . "gs_contactform/gsc_versionschecker.php";
+//include_once INFUSIONS . "gs_contactform/gsc_versionschecker.php";
 
 include INFUSIONS . "gs_contactform/gsc_copyright.php";
 

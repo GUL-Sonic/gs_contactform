@@ -102,7 +102,7 @@ echo "<form name='inputform' method='POST' action='".FUSION_SELF."'>
 	
 closetable();
 		
-include_once INFUSIONS . "gs_contactform/gsc_versionschecker.php";
+//include_once INFUSIONS . "gs_contactform/gsc_versionschecker.php";
 
 include "gsc_copyright.php";
 

@@ -130,7 +130,7 @@ $result = dbquery("SELECT * FROM " . DB_GSC_FIELDS . " ORDER BY id");
 	
 closetable();
 
-include_once INFUSIONS . "gs_contactform/gsc_versionschecker.php";
+//include_once INFUSIONS . "gs_contactform/gsc_versionschecker.php";
 
 include "gsc_copyright.php";
 

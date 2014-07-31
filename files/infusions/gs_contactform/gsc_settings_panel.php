@@ -128,7 +128,7 @@ echo"<table border='1' style='vertical-align: top; margin: 0px auto;' width='350
 	<td class='tbl1'><center><strong>" . $locale['gsc262'] ."</strong></center></td>
 	</tr>
 	<tr>
-	<td><input type='text' name='email_answer' style='width:98%;' maxlength='40' class='textbox' value='".$data6['email_to']."' placeholder='" . $settings['siteemail'] ."' /></td>
+	<td><input type='text' name='email_answer' style='width:98%;' maxlength='40' class='textbox' value='".$data6['email_answer']."' placeholder='" . $settings['siteemail'] ."' /></td>
 	</tr>
 	<tr>
 	<td class='tbl1'><center><strong>" . $locale['gsc263'] ."</strong></center></td>
