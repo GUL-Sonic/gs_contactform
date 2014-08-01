@@ -104,6 +104,7 @@ $err_mobil = (isset($_POST['err_mobil'])) ? $_POST['err_mobil'] : "";
 $err_fax = (isset($_POST['err_fax'])) ? $_POST['err_fax'] : "";
 $err_email = (isset($_POST['err_email'])) ? $_POST['err_email'] : "";
 $err_web = (isset($_POST['err_web'])) ? $_POST['err_web'] : "";
+$err_url = (isset($_POST['err_url'])) ? $_POST['err_url'] : "";
 $err_userdef1 = (isset($_POST['err_userdef1'])) ? $_POST['err_userdef1'] : "";
 $err_userdef2 = (isset($_POST['err_userdef2'])) ? $_POST['err_userdef2'] : "";
 $err_userdef3 = (isset($_POST['err_userdef3'])) ? $_POST['err_userdef3'] : "";
