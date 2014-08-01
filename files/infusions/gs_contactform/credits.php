@@ -155,7 +155,25 @@ und unterliegt als kostenloses php-fusion Add-on den <a href='http://www.gnu.de/
 	Dezentes &copy; Symbol auf allen &ouml;ffentlich zug&auml;nglichen Seiten ersetzt den bisherigen Text<br>
 	Credits hinzugef&uuml;gt<br>
     Updatescript wurde erweitert<br>
-    Neue Versionsnummer 1.2</ul></p>";
+    Neue Versionsnummer 1.2</ul></p>
+	
+<p><strong>Changelog V1.21</strong>
+
+	<ul>Noticemeldung bei fehlgeschlagener cURL Verbindung (gefixt)<br>
+    Kleinere Tabellenfixes<br>
+	Bugfixes<br>
+    Darstellungsoptimierung<br>
+    Versionschecker nun nur noch auf der messages.php und settings_panel.php<br>
+	fsockopen Error bei proxy Hostern weiterhin auf der \"to do\" Liste<br>
+    Updatescript wurde erweitert<br>
+    Neue Versionsnummer 1.21</ul></p>
+	
+<p><strong>Changelog V1.22</strong>
+
+	<ul>Noticemeldung err_url (gefixt)<br>
+	fsockopen Error bei proxy Hostern weiterhin auf der \"to do\" Liste<br>
+    Updatescript wurde erweitert<br>
+    Neue Versionsnummer 1.21</ul></p>";
 	
 closetable();
 
