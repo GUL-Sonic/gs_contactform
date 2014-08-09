@@ -79,6 +79,11 @@ if($data22['firm_field_3'] != "") { echo "
 if($data22['firm_field_4'] != "") { echo "	
 	<br>" . $data22['firm_title_4'] . ": " . $data22['firm_field_4'];
 }
+
+if($data22['firm_field_5'] != "") { echo "	
+	<br>" . $data22['firm_title_5'] . ": " . stripslashes($data22['firm_field_5']);
+}
+
 echo" <br>&nbsp;</td>";
 if($data22['firm_logo'] != "") { echo "	
 	<td rowspan='2'><img style='float: right; width: 200px;' src='" . $data22['firm_logo'] . "'></td></tr>";

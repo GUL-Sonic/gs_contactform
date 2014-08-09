@@ -2,7 +2,7 @@
 
 // Infusionsbeschreibung
 $locale['gsc000']  = "Kontaktformular";
-$locale['gsc001']  = "1.22";
+$locale['gsc001']  = "1.23";
 $locale['gsc002']  = "&Uuml;erarbeitetes Kontaktformular mit Speicherung der eingegangenen Anfragen";
 
 //Kontaktformular�berschrift
@@ -134,7 +134,7 @@ $locale['gsc300'] = "Versionspr&uuml;fung";
 $locale['gsc301'] = "Aktuellste Version";
 $locale['gsc302'] = "Installierte Version";
 $locale['gsc303'] = "Ihre Version ist auf dem neuesten Stand ";
-$locale['gsc304'] = "Downloadlink: ";
+$locale['gsc304'] = "Downloadlink ";
 $locale['gsc305'] = "Die automatische Versionspr&uuml;fung ist zur Zeit nicht m&ouml;glich!<br>Bitte klicken Sie auf den nachfolgenden Link um eine manuelle Versionspr&uuml;fung durchzuf&uuml;hren";
 
 $locale['gsc306'] = "Datenbank-Update verf&uuml;gbar";
@@ -158,6 +158,7 @@ $locale['gsc342'] = "Ust.-ID";
 $locale['gsc343'] = "Bitte geben Sie eine &Uuml;berschrift f&uuml;r Ihr Impressum ein.";
 $locale['gsc344'] = "Letzte &Auml;nderung am:";
 $locale['gsc345'] = "Mail";
+$locale['gsc346'] = "html- oder php-code (bis 500 Zeichen)";
 
 // gsc_disclaimer.php
 $locale['gsc360'] = "Zeige den Disclaimer und die Standard AGB unterhalb des Impressums an";

@@ -143,14 +143,14 @@ if (empty($new_version)) {
 	<td><img src='" . INFUSIONS . "gs_contactform/images/version_old.gif' alt='old version' /></td>
 	<td><span class='gsc_negative'>" . $locale['gsc302'] . ": " . $gsc_version . "</span><br />
 	<span class='gsc_positive'>" . $locale['gsc301'] . ": " . $version_new . "</span><br />
-	<span style='font-weight: bold;'>" . $locale['gsc304'] . ": </span><a href='http://gul-sonic.github.io/gs_contactform/' target='_blank' title='" . $locale['gsc306'] . "'><span style='font-weight: bold;'>" . $locale['gsc306'] . "</span></a></td>
+	<span style='font-weight: bold;'>" . $locale['gsc304'] . ": </span><a href='http://gul-sonic.github.io/gs_contactform/' target='_blank' title='" . $locale['gsc312'] . "'><span style='font-weight: bold;'>" . $locale['gsc312'] . "</span></a></td>
 	</tr>
 	</table>";
     }
 	}
 	}
 	if (empty($version_new)) {
-    $ausgabe = "<br /><span class='gsc_negative'>" . $locale['gsc305'] . "!<br /></span><span style='font-weight: bold;'>" . $locale['gsc304'] . "</span> <a href='http://gul-sonic.github.io/gs_contactform/' target='_blank' title='" . $locale['gsc306'] . "'><span style='font-weight: bold;'>" . $locale['gsc306'] . "</span></a><br /><br />";
+    $ausgabe = "<br /><span class='gsc_negative'>" . $locale['gsc305'] . "!<br /></span><span style='font-weight: bold;'>" . $locale['gsc304'] . ": </span><a href='http://gul-sonic.github.io/gs_contactform/' target='_blank' title='" . $locale['gsc312'] . "'><span style='font-weight: bold;'>" . $locale['gsc312'] . "</span></a><br /><br />";
 }
 }
 if ($gsc_version < $locale['gsc001']) {

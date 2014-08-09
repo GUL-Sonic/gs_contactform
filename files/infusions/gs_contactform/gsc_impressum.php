@@ -79,6 +79,8 @@ if (isset($_POST['update'])) {
 	firm_field_3 = '" . stripinput($_POST['firm_field_3']) . "',
 	firm_title_4 = '" . stripinput($_POST['firm_title_4']) . "',
 	firm_field_4 = '" . stripinput($_POST['firm_field_4']) . "',
+	firm_title_5 = '" . stripinput($_POST['firm_title_5']) . "',
+	firm_field_5 = '" . addslash($_POST['firm_field_5']) . "',
 	impr_head = '" . stripinput($_POST['impr_head']) . "',
 	impr_name = '" . stripinput($_POST['impr_name']) . "',
 	impr_str = '" . stripinput($_POST['impr_str']) . "',
@@ -128,6 +130,8 @@ $data21 = dbarray(dbquery("SELECT * FROM " . DB_GSC_IMPRESSUM . " WHERE id='1'")
 	 $firm_field_3 = $data21['firm_field_3'];
 	 $firm_title_4 = $data21['firm_title_4'];
 	 $firm_field_4 = $data21['firm_field_4'];
+	 $firm_title_5 = $data21['firm_title_5'];
+	 $firm_field_5 = $data21['firm_field_5'];
 	 $impr_head = $data21['impr_head'];
 	 $impr_name = $data21['impr_name'];
 	 $impr_str = $data21['impr_str'];
@@ -179,14 +183,14 @@ $data21 = dbarray(dbquery("SELECT * FROM " . DB_GSC_IMPRESSUM . " WHERE id='1'")
 	
 	<tr>
 	<td>" . $locale['gsc065'] .":</td>
-	<td> <input type='text' name='firm_str' style='width:207px;' maxlength='40' class='textbox' value='" . $firm_str . "' placeholder='" . $locale['gsc074'] ."' />
+	<td> <input type='text' name='firm_str' style='width:202px;' maxlength='40' class='textbox' value='" . $firm_str . "' placeholder='" . $locale['gsc074'] ."' />
 	<input type='text' name='firm_hnr' style='width:35px;' maxlength='10' class='textbox' value='" . $firm_hnr . "' placeholder='" . $locale['gsc075'] ."' /></td>
 	</tr>
 	
 	<tr>
 	<td>" . $locale['gsc066'] .":</td>
 	<td> <input type='text' name='firm_plz' style='width:35px;' maxlength='10' class='textbox' value='" . $firm_plz . "' placeholder='" . $locale['gsc076'] ."' />
-	<input type='text' name='firm_ort' style='width:207px;' maxlength='40' class='textbox' value='" . $firm_ort . "' placeholder='" . $locale['gsc077'] ."' /></td>
+	<input type='text' name='firm_ort' style='width:202px;' maxlength='40' class='textbox' value='" . $firm_ort . "' placeholder='" . $locale['gsc077'] ."' /></td>
 	</tr>
 
 	<tr>
@@ -218,23 +222,28 @@ $data21 = dbarray(dbquery("SELECT * FROM " . DB_GSC_IMPRESSUM . " WHERE id='1'")
 	</tr>
 	
 	<tr>
-	<td> <input type='text' name='firm_title_1' style='width:92%;' maxlength='100' class='textbox' value='" . $firm_title_1 . "' placeholder='" . $locale['gsc223'] ."' />&nbsp;:</td>
+	<td> <input type='text' name='firm_title_1' style='width:90%;' maxlength='100' class='textbox' value='" . $firm_title_1 . "' placeholder='" . $locale['gsc223'] ."' />&nbsp;:</td>
 	<td> <input type='text' name='firm_field_1' style='width:250px;' maxlength='100' class='textbox' value='" . $firm_field_1 . "' placeholder='" . $locale['gsc223'] ."' /></td>
 	</tr>
 	
 	<tr>
-	<td> <input type='text' name='firm_title_2' style='width:92%;' maxlength='100' class='textbox' value='" . $firm_title_2 . "' placeholder='" . $locale['gsc223'] ."' />&nbsp;:</td>
+	<td> <input type='text' name='firm_title_2' style='width:90%;' maxlength='100' class='textbox' value='" . $firm_title_2 . "' placeholder='" . $locale['gsc223'] ."' />&nbsp;:</td>
 	<td> <input type='text' name='firm_field_2' style='width:250px;' maxlength='100' class='textbox' value='" . $firm_field_2 . "' placeholder='" . $locale['gsc223'] ."' /></td>
 	</tr>
 	
 	<tr>
-	<td> <input type='text' name='firm_title_3' style='width:92%;' maxlength='100' class='textbox' value='" . $firm_title_3 . "' placeholder='" . $locale['gsc223'] ."' />&nbsp;:</td>
+	<td> <input type='text' name='firm_title_3' style='width:90%;' maxlength='100' class='textbox' value='" . $firm_title_3 . "' placeholder='" . $locale['gsc223'] ."' />&nbsp;:</td>
 	<td> <input type='text' name='firm_field_3' style='width:250px;' maxlength='100' class='textbox' value='" . $firm_field_3 . "' placeholder='" . $locale['gsc223'] ."' /></td>
 	</tr>
 	
 	<tr>
-	<td> <input type='text' name='firm_title_4' style='width:92%;' maxlength='100' class='textbox' value='" . $firm_title_4 . "' placeholder='" . $locale['gsc223'] ."' />&nbsp;:</td>
+	<td> <input type='text' name='firm_title_4' style='width:90%;' maxlength='100' class='textbox' value='" . $firm_title_4 . "' placeholder='" . $locale['gsc223'] ."' />&nbsp;:</td>
 	<td> <input type='text' name='firm_field_4' style='width:250px;' maxlength='100' class='textbox' value='" . $firm_field_4 . "' placeholder='" . $locale['gsc223'] ."' /></td>
+	</tr>
+	
+	<tr>
+	<td> <input type='text' name='firm_title_5' style='width:90%;' maxlength='100' class='textbox' value='" . $firm_title_5 . "' placeholder='" . $locale['gsc223'] ."' />&nbsp;:</td>
+	<td> <input type='text' name='firm_field_5' style='width:250px;' maxlength='500' class='textbox' value='" . stripslashes($firm_field_5) . "' placeholder='" . $locale['gsc346'] ."' /></td>
 	</tr>
 	
 	</table>
@@ -258,10 +267,10 @@ $data21 = dbarray(dbquery("SELECT * FROM " . DB_GSC_IMPRESSUM . " WHERE id='1'")
 	<tr>
 	<td>" . $locale['gsc065'] .":<font color='red'>*</font></td>";
 	if($err_adress==1) {echo "
-	<td> <input type='text' name='impr_str' style='width:207px; background-color:#FFDDDD;' maxlength='40' class='textbox' value='" . $impr_str . "' placeholder='" . $locale['gsc074'] ."' />
+	<td> <input type='text' name='impr_str' style='width:202px; background-color:#FFDDDD;' maxlength='40' class='textbox' value='" . $impr_str . "' placeholder='" . $locale['gsc074'] ."' />
 	<input type='text' name='impr_hnr' style='width:35px; background-color:#FFDDDD;' maxlength='10' class='textbox' value='" . $impr_hnr . "' placeholder='" . $locale['gsc075'] ."' /></td>";}
 	else {echo "
-	<td> <input type='text' name='impr_str' style='width:207px;' maxlength='40' class='textbox' value='" . $impr_str . "' placeholder='" . $locale['gsc074'] ."' />
+	<td> <input type='text' name='impr_str' style='width:202px;' maxlength='40' class='textbox' value='" . $impr_str . "' placeholder='" . $locale['gsc074'] ."' />
 	<input type='text' name='impr_hnr' style='width:35px;' maxlength='10' class='textbox' value='" . $impr_hnr . "' placeholder='" . $locale['gsc075'] ."' /></td>";}
 	echo"</tr>
 	
@@ -269,10 +278,10 @@ $data21 = dbarray(dbquery("SELECT * FROM " . DB_GSC_IMPRESSUM . " WHERE id='1'")
 	<td>" . $locale['gsc066'] .":<font color='red'>*</font></td>";
 	if($err_plzort==1) {echo "
 	<td> <input type='text' name='impr_plz' style='width:35px; background-color:#FFDDDD;' maxlength='10' class='textbox' value='" . $impr_plz . "' placeholder='" . $locale['gsc076'] ."' />
-	<input type='text' name='impr_ort' style='width:207px; background-color:#FFDDDD;' maxlength='40' class='textbox' value='". $impr_ort . "' placeholder='" . $locale['gsc077'] ."' /></td>";}
+	<input type='text' name='impr_ort' style='width:202px; background-color:#FFDDDD;' maxlength='40' class='textbox' value='". $impr_ort . "' placeholder='" . $locale['gsc077'] ."' /></td>";}
 	else {echo "
 	<td> <input type='text' name='impr_plz' style='width:35px;' maxlength='5' class='textbox' value='" . $impr_plz . "' placeholder='" . $locale['gsc076'] ."' />
-	<input type='text' name='impr_ort' style='width:207px;' maxlength='40' class='textbox' value='" . $impr_ort . "' placeholder='" . $locale['gsc077'] ."' /></td>";}
+	<input type='text' name='impr_ort' style='width:202px;' maxlength='40' class='textbox' value='" . $impr_ort . "' placeholder='" . $locale['gsc077'] ."' /></td>";}
 	echo"</tr>
 
 	<tr>
