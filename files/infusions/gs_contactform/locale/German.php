@@ -2,10 +2,10 @@
 
 // Infusionsbeschreibung
 $locale['gsc000']  = "Kontaktformular";
-$locale['gsc001']  = "1.23";
+$locale['gsc001']  = "1.24";
 $locale['gsc002']  = "&Uuml;erarbeitetes Kontaktformular mit Speicherung der eingegangenen Anfragen";
 
-//Kontaktformular�berschrift
+//Kontaktformularüberschrift
 $locale['gsc020']  = "Sie haben Fragen, W&uuml;nsche oder Anregungen?\nSchreiben Sie uns, wir freuen uns auf Ihre Nachricht.";
 $locale['gsc021']  = "Als registriertes Mitglied dieser Seite k&ouml;nnen Sie mir auch <br>eine ";
 $locale['gsc022']  = "Private Nachricht (PN) ";
@@ -19,6 +19,7 @@ $locale['gsc043']  = "Ihre Anfrage wurde erfolgreich versandt,<br>wir werden uns
 $locale['gsc044']  = "Es trat ein Fehler beim versenden der Kontaktanfrage auf!<br>Bitte versuchen sie es sp&auml;ter erneut.";
 $locale['gsc045']  = "Kopie dieser Anfrage bitte auch an meine Emailadresse senden.";
 $locale['gsc046']  = "Ihre Anfrage auf ";
+$locale['gsc047']  = "Ich habe die <a href='agb.php' target='_blank'>AGB</a> gelesen und akzeptiere diese.";
 
 // Kontaktfelder
 $locale['gsc060']  = "IP-Adresse";
@@ -40,8 +41,9 @@ $locale['gsc075']  = "100b";
 $locale['gsc076']  = "12345";
 $locale['gsc077']  = "Ortsname";
 $locale['gsc078']  = "Logo";
+$locale['gsc079']  = "AGB Zustimmung erforderlich";
 
-// Kontaktformular-Fu�
+// Kontaktformular-Funktionen
 $locale['gsc080']  = "Zeichen verbleibend";
 $locale['gsc081']  = "Sicherheitscode:";
 $locale['gsc082']  = "Sicherheitscode eingeben:";
@@ -69,6 +71,7 @@ $locale['gsc132'] = "Sie haben keinen Betreff angegeben.";
 $locale['gsc133'] = "Sie haben keine Nachricht eingegeben.";
 $locale['gsc134'] = "Der Sicherheitscode stimmt nicht &uuml;berein.";
 $locale['gsc135'] = "Die eingegebene URL ist fehlerhaft. Erlaubtes Format = http://yourdomain.org";
+$locale['gsc136'] = "Sie m&uuml;ssen den AGB zustimmen um die Nachricht zu senden";
 
 // Funktionen
 $locale['gsc140'] = "bearbeiten";
@@ -88,7 +91,7 @@ $locale['gsc151'] = "hinzuf&uuml;gen";
 $locale['gsc152'] = "schlie&szlig;en";
 $locale['gsc153'] = "Seitenumbruch";
 
-// �berschriften
+// Überschriften
 $locale['gsc160'] = "Einstellungen";
 $locale['gsc161'] = "Kontaktfelder - Verwaltung";
 $locale['gsc162'] = "Eigene Kontaktfelder";
@@ -129,7 +132,7 @@ $locale['gsc262'] = "Absenderadresse die bei <br>\"Kopie an Verfasser\"<br>angeg
 $locale['gsc263'] = "PM bei Eingang einer Kontaktanfrage senden an: ";
 $locale['gsc264'] = "Keine PM bei Eingang einer Kontaktanfrage senden";
 
-// Verionspr�fung
+// Verionsprüfung
 $locale['gsc300'] = "Versionspr&uuml;fung";
 $locale['gsc301'] = "Aktuellste Version";
 $locale['gsc302'] = "Installierte Version";

@@ -47,6 +47,7 @@ $userdef3 = (isset($_POST['userdef3'])) ? $_POST['userdef3'] : "";
 $userdef4 = (isset($_POST['userdef4'])) ? $_POST['userdef4'] : "";
 
 $email_kopie = (isset($_POST['email_kopie'])) ? 1 : 0; 
+$gsc_agb = (isset($_POST['gsc_agb'])) ? 1 : 0;
 
 $gsc_geb_tag = (isset($_POST['gsc_geb_tag'])) ? $_POST['gsc_geb_tag'] : "";
 $gsc_geb_mon = (isset($_POST['gsc_geb_mon'])) ? $_POST['gsc_geb_mon'] : "";
@@ -80,9 +81,6 @@ $gsc_text = (isset($_POST['gsc_text'])) ? $_POST['gsc_text'] : "";
 $gsc_senden = (isset($_POST['gsc_senden'])) ? $_POST['gsc_senden'] : "";
 $gsc_betreff = (isset($_POST['gsc_betreff'])) ? $_POST['gsc_betreff'] : "";
 
-$geb_show = (isset($_POST['geb_show'])) ? $_POST['geb_show'] : "";
-$geb_requ = (isset($_POST['geb_requ'])) ? $_POST['geb_requ'] : "";
-
 $field_name = (isset($_POST['field_name'])) ? $_POST['field_name'] : "";
 $field_place = (isset($_POST['field_place'])) ? $_POST['field_place'] : "";
 $field_err = (isset($_POST['field_err'])) ? $_POST['field_err'] : "";
@@ -110,6 +108,7 @@ $err_userdef2 = (isset($_POST['err_userdef2'])) ? $_POST['err_userdef2'] : "";
 $err_userdef3 = (isset($_POST['err_userdef3'])) ? $_POST['err_userdef3'] : "";
 $err_userdef4 = (isset($_POST['err_userdef4'])) ? $_POST['err_userdef4'] : "";
 $err_betreff = (isset($_POST['err_betreff'])) ? $_POST['err_betreff'] : "";
+$err_agb = (isset($_POST['err_agb'])) ? $_POST['err_agb'] : "";
 $err_text = (isset($_POST['err_text'])) ? $_POST['err_text'] : "";
 $err_captcha = (isset($_POST['err_captcha'])) ? $_POST['err_captcha'] : "";
 

@@ -73,7 +73,8 @@ if (isset($_POST['update'])) {
 	userdef3_show = '" . stripinput((isset($_POST['userdef3_show']) ? 1 : 0)) . "',
 	userdef3_requ = '" . stripinput((isset($_POST['userdef3_requ']) ? 1 : 0)) . "',
 	userdef4_show = '" . stripinput((isset($_POST['userdef4_show']) ? 1 : 0)) . "',
-	userdef4_requ = '" . stripinput((isset($_POST['userdef4_requ']) ? 1 : 0)) . "' WHERE id='1'");
+	userdef4_requ = '" . stripinput((isset($_POST['userdef4_requ']) ? 1 : 0)) . "',
+	agb_show = '" . stripinput((isset($_POST['agb_show']) ? 1 : 0)) . "' WHERE id='1'");
 	echo $gespeichert;
     }
 
@@ -249,6 +250,11 @@ echo"	<tr>
 		<tr>
 			<td class='tbl1' width='200px'>" . $locale['gsc073'] . "</td>
 			<td class='tbl1'><font color='green'><center>" . $locale['gsc183'] . "</center></font></td>
+			<td class='tbl1'><font color='green'><center>" . $locale['gsc183'] . "</center></font></td>
+		</tr>
+		<tr>
+			<td class='tbl1' width='200px'>" . $locale['gsc079'] . "</td>
+			<td class='tbl1'><center><input type='checkbox' " . (($data6['agb_show'] == 1) ? "checked='checked'" : "") . " name='agb_show' value='1' style='width:10px; text-align:center'></center></td>
 			<td class='tbl1'><font color='green'><center>" . $locale['gsc183'] . "</center></font></td>
 		</tr>
 			<td align='center' class='tbl2' colspan='0'><input type='submit' name='update' class='button' value='" . $locale['gsc141'] . "'></td>

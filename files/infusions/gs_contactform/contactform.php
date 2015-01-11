@@ -61,11 +61,12 @@ if($data['userdef1_requ'] == 1) {if($gsc_senden && !$gsc_userdef1) {$err_userdef
 if($data['userdef2_requ'] == 1) {if($gsc_senden && !$gsc_userdef2) {$err_userdef2=1;} else{$err_userdef2=0;}}
 if($data['userdef3_requ'] == 1) {if($gsc_senden && !$gsc_userdef3) {$err_userdef3=1;} else{$err_userdef3=0;}}
 if($data['userdef4_requ'] == 1) {if($gsc_senden && !$gsc_userdef4) {$err_userdef4=1;} else{$err_userdef4=0;}}
+if($data['agb_show'] == 1) {if($gsc_senden && !$gsc_agb) {$err_agb=1;} else{$err_agb=0;}}
 if($gsc_senden && !$gsc_betreff) {$err_betreff=1;} else{$err_betreff=0;}
 if($gsc_senden && !$gsc_text) {$err_text=1;} else{$err_text=0;}
 if($gsc_senden && $_CAPTCHA_IS_VALID == false) {$err_captcha=1;} else {$err_captcha=0;} 
 
-if($gsc_senden && ($err_ip !=1) && ($err_name !=1)  && ($err_name !=1) && ($err_geb !=1) && ($err_firma !=1) && ($err_position !=1) && ($err_adress !=1) && ($err_plzort !=1) && ($err_tel !=1) && ($err_mobil !=1) && ($err_fax !=1)&& ($err_email !=1) && ($err_url !=1) && ($err_web !=1) && ($err_userdef1 !=1) && ($err_userdef2 !=1) && ($err_userdef3 !=1) && ($err_userdef4 !=1) && $gsc_betreff && $gsc_text && $_CAPTCHA_IS_VALID) {
+if($gsc_senden && ($err_ip !=1) && ($err_name !=1)  && ($err_name !=1) && ($err_geb !=1) && ($err_firma !=1) && ($err_position !=1) && ($err_adress !=1) && ($err_plzort !=1) && ($err_tel !=1) && ($err_mobil !=1) && ($err_fax !=1)&& ($err_email !=1) && ($err_url !=1) && ($err_web !=1) && ($err_userdef1 !=1) && ($err_userdef2 !=1) && ($err_userdef3 !=1) && ($err_userdef4 !=1) && $gsc_betreff && $gsc_text && $_CAPTCHA_IS_VALID && ($err_agb !=1)) {
 $message = nl2br($gsc_text);
 if ($gsc_geb_tag && $gsc_geb_mon && $gsc_geb_jahr) { 
 $geb= "
@@ -318,6 +319,9 @@ else {
 	}
 	if($err_captcha==1) {
 	echo"<div class='admin-message'>" . $locale['gsc134'] . "</div>";
+	}
+	if($err_agb==1) {
+	echo"<div class='admin-message'>" . $locale['gsc136'] . "</div>";
 	}
 
 	echo"
@@ -619,9 +623,14 @@ else {
 	<br></table>
 	<table border='0' style='vertical-align: top; margin: 0px auto;'>
 	<tr>
-	<td class='tbl1'><center><input type='checkbox' " . (($email_kopie == 1) ? "checked='checked'" : "") . " name='email_kopie' value='1' style='width:10px; text-align:center'></center></td><td>".$locale['gsc045']."</td>
-	<tr>
-	<br></table>
+	<td class='tbl1'><center><input type='checkbox' " . (($email_kopie == 1) ? "checked='checked'" : "") . " name='email_kopie' value='1' style='width:10px; text-align:center'></center></td><td>".$locale['gsc045']."</td>";
+	if ($data['agb_show'] == 1){ echo "
+	<tr>";
+	if($err_agb==1) {echo "<td class='tbl1'><center><input type='checkbox' " . (($gsc_agb == 1) ? "checked='checked'" : "") . " name='gsc_agb' value='1' style='width:10px; text-align:center background-color:#FFDDDD;'></center></td><td>".$locale['gsc047']."</td>";}
+	else {echo "<td class='tbl1'><center><input type='checkbox' " . (($gsc_agb == 1) ? "checked='checked'" : "") . " name='gsc_agb' value='1' style='width:10px; text-align:center'></center></td><td>".$locale['gsc047']."<font color='red'>*</font></td>";}
+	echo"<tr>";
+	}
+	echo"<br></table>
 	<center><input type='submit' name='gsc_senden' value='" . $locale['gsc083'] . "' class='button' /></center>
 	</form><br><br>
 	<center>" . $locale['gsc084'] . "</center>";

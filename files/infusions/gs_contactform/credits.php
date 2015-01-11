@@ -44,7 +44,7 @@ opentable("<center>".$locale['gsc169']."</center>");
 
 echo "
 <h1>GUL-Sonic's Erweitertes Kontaktformular <br>
-...jetzt auch mit Impressum / Disclaimer / AGB / pers&ouml;nlicher Vorstellungsseite (&uuml;ber...)</h1>
+mit Impressum / Disclaimer / AGB / pers&ouml;nlicher Vorstellungsseite (&uuml;ber...)</h1>
 
 <h2>Rechtliche Hinweise</h2>
 
@@ -56,7 +56,7 @@ und unterliegt als kostenloses php-fusion Add-on den <a href='http://www.gnu.de/
 
 <li>Sie sind nicht berechtigt diese Infusion als Ihre eigene auszugeben!</li>
 
-<li>Sie sind nicht berechtigt die Credits oder diese readme zu bearbeiten oder zu entfernen!</li></ul></p>
+<li>Sie sind nicht berechtigt diese Credits zu bearbeiten oder zu entfernen!</li></ul></p>
 
 <p>&nbsp;</p>
 
@@ -180,7 +180,14 @@ und unterliegt als kostenloses php-fusion Add-on den <a href='http://www.gnu.de/
 	<ul>html- / php-code Feld im Impressum hinzugef&uuml;gt<br>
 	fsockopen Error bei proxy Hostern weiterhin auf der \"to do\" Liste<br>
     Updatescript wurde erweitert<br>
-    Neue Versionsnummer 1.23</ul></p>";
+    Neue Versionsnummer 1.23</ul></p>
+
+<p><strong>Changelog V1.24</strong>
+
+	<ul>AGB-Zustimmung als Pflichtfeld w&auml;hlbar<br>
+	fsockopen Error bei proxy Hostern weiterhin auf der \"to do\" Liste<br>
+    Updatescript wurde erweitert<br>
+    Neue Versionsnummer 1.24</ul></p>";
 	
 closetable();
 
